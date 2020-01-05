@@ -10,7 +10,7 @@ export default function Budget() {
 }
 
 Budget.navigationOptions = {
-  title: "State"
+  header: null
 };
 
 const styles = StyleSheet.create({
