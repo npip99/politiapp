@@ -1,10 +1,14 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { StyleSheet, View, Text } from "react-native";
 
-export default function App() {
+import AppNavigator from "../navigation/AppNavigator";
+
+export default function PoliticalInfo(props) {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text>Blah blah blah</Text>
+      {/* {Platform.OS === "ios" && <StatusBar barStyle="default" />} */}
+      <AppNavigator />
     </View>
   );
 }
@@ -12,8 +16,11 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff"
   },
+  text: {
+    flex: 1,
+    left: "50%",
+    backgroundColor: "#fff"
+  }
 });
