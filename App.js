@@ -1,23 +1,8 @@
 import React from "react";
-import { StyleSheet, View, Text } from "react-native";
-
+//Pull in AppNavigator from the navigation folder
+import { DrawerNavigator } from "react-navigation-drawer";
 import AppNavigator from "./navigation/AppNavigator";
 
-export default function PoliticalInfo(props) {
-  return (
-    <View style={styles.container}>
-      <AppNavigator></AppNavigator>
-    </View>
-  );
+export default function App() {
+  return <AppNavigator />;
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff"
-  },
-  overlay: {
-    flex: 1,
-    backgroundColor: "red"
-  }
-});

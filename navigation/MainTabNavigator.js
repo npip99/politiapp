@@ -2,6 +2,7 @@ import React from "react";
 import { Platform } from "react-native";
 import { createStackNavigator } from "react-navigation-stack";
 import { createBottomTabNavigator } from "react-navigation-tabs";
+import { createAppContainer, createSwitchNavigator } from "react-navigation";
 
 import Officials from "../components/Officials";
 import Budget from "../components/Budget";
@@ -19,8 +20,8 @@ const HomeStack = createStackNavigator(
 );
 
 HomeStack.navigationOptions = {
-  tabBarLabel: "Officials"
-  // tabBarIcon: null
+  tabBarLabel: "Officials",
+  tabBarIcon: null
 };
 
 HomeStack.path = "";
@@ -39,12 +40,15 @@ LinksStack.navigationOptions = {
 
 LinksStack.path = "";
 
-const tabNavigator = createBottomTabNavigator({
-  HomeStack,
-  LinksStack
-  // SettingsStack
-});
+const tabNavigator = createBottomTabNavigator(
+  {
+    HomeStack,
+    LinksStack
+    // SettingsStack
+  },
+  { headerMode: "none" }
+);
 
 tabNavigator.path = "";
 
-export default tabNavigator;
+export default createAppContainer(tabNavigator);

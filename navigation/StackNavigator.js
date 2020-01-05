@@ -2,11 +2,12 @@ import * as React from "react";
 import { Button, View, Text } from "react-native";
 import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
-
+import Header from "../components/Header";
 class HomeScreen extends React.Component {
   render() {
     return (
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+        <Header />
         <Text>Home Screen</Text>
         <Button
           title="Go to Details"
