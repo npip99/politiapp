@@ -1,19 +1,44 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import {
+  Platform,
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity
+} from "react-native";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
-  );
-}
+import { createStackNavigator } from "react-navigation-stack";
+import IOSIcon from "react-native-vector-icons/Ionicons";
+import PoliticalInfo from "../components/PoliticalInfo";
+import Detail from "./Detail";
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+const stackNav = createStackNavigator({
+  Main: {
+    screen: props => (
+      <PoliticalInfo screenProps={{ pageName: "State", ...props }} />
+    ),
+
+    navigationOptions: ({ navigation }) => ({
+      title: "State",
+      headerLeft: () => (
+        <TouchableOpacity onPress={() => navigation.openDrawer()}>
+          <View
+            style={{
+              paddingLeft: 15
+            }}
+          >
+            <IOSIcon name="ios-menu" size={30} />
+          </View>
+        </TouchableOpacity>
+      )
+    })
   },
+  Detail: {
+    screen: Detail,
+    navigationOptions: ({ navigation }) => ({
+      title: "Detail"
+    })
+  }
 });
+
+export default stackNav;
