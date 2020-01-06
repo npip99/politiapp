@@ -12,7 +12,7 @@ export default class ScreenOne extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Header name="One"></Header>
+        {/* <Header name="One"></Header> */}
         <MainTabNavigator></MainTabNavigator>
       </React.Fragment>
     );
