@@ -10,7 +10,7 @@ export default function List(props) {
       <View style={styles.container}>
         <Text>List</Text>
         {props.data.map(x => {
-          return <ListItem info={x}></ListItem>;
+          return <ListItem info={x}/>;
         })}
       </View>
     </ScrollView>

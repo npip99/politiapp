@@ -42,3 +42,4 @@ const stackNav = createStackNavigator({
 });
 
 export default stackNav;
+

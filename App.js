@@ -6,6 +6,7 @@ import { createDrawerNavigator } from "react-navigation-drawer";
 import IOSIcon from "react-native-vector-icons/Ionicons";
 import State from "./screens/State";
 import Local from "./screens/Local";
+
 const App = createDrawerNavigator(
   {
     State: {
@@ -22,3 +23,4 @@ const App = createDrawerNavigator(
 );
 
 export default createAppContainer(App);
+
