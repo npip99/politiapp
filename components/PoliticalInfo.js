@@ -1,26 +1,14 @@
 import React, { Component } from "react";
 import { Text, View, StyleSheet, Button } from "react-native";
+import { createAppContainer } from 'react-navigation';
+import { createBottomTabNavigator } from 'react-navigation-tabs';
+import Officials from './Officials';
+import Budget from './Budget';
 
-class MainScreen extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Main {this.props.screenProps.pageName}</Text>
-        <Button
-          onPress={() => this.props.screenProps.navigation.navigate("Detail")}
-          title="Detail Page"
-        />
-      </View>
-    );
-  }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center"
-  }
+const TabNavigator = createBottomTabNavigator({
+  Officials: Officials,
+  Budget: Budget,
 });
 
-export default MainScreen;
+export default createAppContainer(TabNavigator);
+

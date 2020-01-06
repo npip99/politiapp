@@ -1,23 +1,17 @@
 import React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, Text, View, ScrollView } from "react-native";
 
-export default function Budget() {
+export default function Budget(props) {
   return (
-    <View style={styles.container}>
-      <Text>LinksScreen</Text>
+    <View>
+      <Text>THIS IS THE GOVERNMENT BUDGET</Text>
     </View>
   );
 }
 
-Budget.navigationOptions = {
-  header: null
-};
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center"
   }
 });
+
