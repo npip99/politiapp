@@ -5,7 +5,7 @@ class Detail extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Detail Screen</Text>
+        <Text>{this.props.navigation.state.params.name}</Text>
       </View>
     );
   }

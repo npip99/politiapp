@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View, Button } from "react-native";
+import List from "./List";
 
 export default class Officials extends React.Component {
   constructor(props) {
@@ -7,25 +8,23 @@ export default class Officials extends React.Component {
     this.state = {
       officials: [
         {
-          name: 'Rick Scott',
-          position: 'Senator',
-          beliefs: [
-            'Believes that governments are inefficient'
-          ],
+          id: 1,
+          name: "Rick Scott",
+          position: "Senator",
+          beliefs: ["Believes that governments are inefficient"]
         },
         {
-          name: 'Marco Rubio',
-          position: 'Senator',
-          beliefs: [
-            'speaks spanish',
-          ],
-        },
+          id: 2,
+          name: "Marco Rubio",
+          position: "Senator",
+          beliefs: ["speaks spanish"]
+        }
       ]
-    }
+    };
   }
 
   render() {
-    if (this.props.screenProps.pageName == 'Local') {
+    if (this.props.screenProps.pageName == "Local") {
       // Do local stuff
     } else {
       // Do state stuff
@@ -33,19 +32,17 @@ export default class Officials extends React.Component {
     return (
       <View>
         <Text>THIS IS THE LIST OF OFFICIALS</Text>
-        <Button
-          onPress={() =>
-            this.props.screenProps.navigation.navigate("Detail", {name: "OFFICIAL"})
-          }
-          title="Detail Page"
-        />
         <List
-          data={
-            this.state.officials.map(official => {
-              return {
-                title: official.name,
-                description: official.position,
-              };
+          data={this.state.officials.map(official => {
+            return {
+              key: official.id,
+              title: official.name,
+              description: official.position
+            };
+          })}
+          onPress={key =>
+            this.props.screenProps.navigation.navigate("Detail", {
+              name: "OFFICIAL" + key
             })
           }
         />
@@ -56,7 +53,6 @@ export default class Officials extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 1
   }
 });
-

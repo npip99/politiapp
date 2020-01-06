@@ -1,16 +1,21 @@
 import React from "react";
 import { StyleSheet, Text, View, ScrollView } from "react-native";
 import ListItem from "./ListItem";
+import { TouchableOpacity } from "react-native-gesture-handler";
 const width = "80%";
 const height = "40%";
 
 export default function List(props) {
   return (
-    <ScrollView>
-      <View style={styles.container}>
+    <ScrollView style={styles.container}>
+      <View>
         <Text>List</Text>
         {props.data.map(x => {
-          return <ListItem info={x}/>;
+          return (
+            <TouchableOpacity key={x.key} onPress={() => props.onPress(x.key)}>
+              <ListItem info={x} />
+            </TouchableOpacity>
+          );
         })}
       </View>
     </ScrollView>
@@ -19,9 +24,8 @@ export default function List(props) {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    top: 50,
-    alignItems: "center"
+    height: "100%",
+    width: "100%"
     // justifyContent: "center",
   }
 });

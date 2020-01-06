@@ -6,7 +6,7 @@ export default function ListItem(props) {
   //info.description
   return (
     <View style={styles.box}>
-      <View style={styles.picture}></View>
+      <View style={styles.image}></View>
       <Text style={styles.title}>{props.info.title}</Text>
       <Text style={styles.description}>{props.info.description}</Text>
     </View>
@@ -14,7 +14,7 @@ export default function ListItem(props) {
 }
 
 const styles = StyleSheet.create({
-  picture: {
+  image: {
     left: 20,
     top: 20,
     width: 40,
