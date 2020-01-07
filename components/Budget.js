@@ -4,15 +4,6 @@ import PieChart from "react-native-pie";
 import List from "./List";
 
 export default function Budget(props) {
-  const chartConfig = {
-    backgroundGradientFrom: "#1E2923",
-    backgroundGradientFromOpacity: 0,
-    backgroundGradientTo: "#08130D",
-    backgroundGradientToOpacity: 0.5,
-    color: (opacity = 1) => `rgba(26, 255, 146, ${opacity})`,
-    strokeWidth: 2, // optional, default 3
-    barPercentage: 0.5
-  };
   const budgetData = [
     {
       name: "Education",
@@ -38,7 +29,7 @@ export default function Budget(props) {
     {
       name: "Utilities",
       budget: 8538000,
-      color: "#ffffff",
+      color: "#ff0",
       legendFontColor: "#7F7F7F",
       legendFontSize: 15
     },
@@ -71,7 +62,7 @@ export default function Budget(props) {
     return {
       key: budgetDatum.name,
       title: budgetDatum.name,
-      description: budgetDatum.budget,
+      description: "$" + budgetDatum.budget,
       color: budgetDatum.color
     };
   });
@@ -94,13 +85,16 @@ export default function Budget(props) {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     flexDirection: "column",
     alignItems: "center",
+    backgroundColor: "#fff",
   },
   pieChartContainer: {
-    marginTop: 10,
+    marginVertical: 5,
   },
   listContainer: {
+    flex: 1,
     width: "100%",
   }
 });

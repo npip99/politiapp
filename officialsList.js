@@ -145,7 +145,7 @@ var state = [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Official_Portrait_of_Senator_Rick_Scott_%28R-FL%29.jpg/440px-Official_Portrait_of_Senator_Rick_Scott_%28R-FL%29.jpg",
     beliefs: [
       {
-        belief: "I'm a state person"
+        belief: "Believes that governments are inherently inefficient, and that private enterprise is better."
       },
       {
         belief: "I'm a state person"

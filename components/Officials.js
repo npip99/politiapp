@@ -31,8 +31,7 @@ export default class Officials extends React.Component {
       officials = state;
     }
     return (
-      <View>
-        <Text>THIS IS THE LIST OF OFFICIALS</Text>
+      <View style={styles.container}>
         <List
           data={officials.map(official => {
             return {

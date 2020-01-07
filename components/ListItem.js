@@ -17,11 +17,21 @@ function ListItemImage(props) {
   }
 }
 
+function elevationShadowStyle(elevation) {
+  return {
+    elevation,
+    shadowColor: 'black',
+    shadowOffset: { width: 0, height: 0.5 * elevation },
+    shadowOpacity: 0.3,
+    shadowRadius: 0.8 * elevation
+  };
+}
+
 export default function ListItem(props) {
   //info.title
   //info.description
   return (
-    <View style={styles.box}>
+    <View style={styles.container}>
       <ListItemImage image={props.info.image} color={props.info.color} />
       <Text style={styles.title}>{props.info.title}</Text>
       <Text style={styles.description}>{props.info.description}</Text>
@@ -30,6 +40,14 @@ export default function ListItem(props) {
 }
 
 const styles = StyleSheet.create({
+  container: {
+//    backgroundColor: "#F3D1B0",
+    marginVertical: 5,
+    marginHorizontal: 10,
+
+    ...elevationShadowStyle(3),
+    backgroundColor: "#fff",
+  },
   imageContainer: {
     left: 20,
     top: 20,
@@ -50,21 +68,13 @@ const styles = StyleSheet.create({
   },
   title: {
     top: -25,
+    fontSize: 22,
     marginLeft: 100,
     marginRight: 10,
-    backgroundColor: "yellow"
+   // backgroundColor: "yellow"
   },
   description: {
     margin: 10,
-    backgroundColor: "orange"
+  //  backgroundColor: "orange"
   },
-  box: {
-    flex: 1,
-    flexDirection: "column",
-    backgroundColor: "#F3D1B0",
-    marginTop: 10,
-    marginLeft: 10,
-    marginRight: 10,
-    borderRadius: 5
-  }
 });
