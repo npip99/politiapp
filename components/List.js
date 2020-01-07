@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, ScrollView, Image } from "react-native";
+import { StyleSheet, View, ScrollView } from "react-native";
 import ListItem from "./ListItem";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
@@ -13,7 +13,7 @@ export default function List(props) {
               key={x.key}
               onPress={() => props.onPress && props.onPress(x)}
             >
-              <ListItem info={x}/>
+              <ListItem info={x} />
             </TouchableOpacity>
           );
         })}
@@ -25,13 +25,7 @@ export default function List(props) {
 const styles = StyleSheet.create({
   container: {
     height: "100%",
-    width: "100%",
-    backgroundColor: "#fff",
+    width: "100%"
     // justifyContent: "center",
-  },
-  image: {
-    width: 175,
-    height: 175,
-    margin: 15,
   }
 });
