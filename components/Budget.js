@@ -68,12 +68,11 @@ export default function Budget(props) {
     <View>
       <PieChart
         data={budgetData}
-        width={Dimensions.get("window").width}
-        height={250}
+        width={150}
+        height={150}
         chartConfig={chartConfig}
         accessor="budget"
         backgroundColor="transparent"
-        paddingLeft="15"
         hasLegend={false}
         absolute
       />
