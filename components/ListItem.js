@@ -49,22 +49,18 @@ const styles = StyleSheet.create({
     borderRadius: 5
   },
   title: {
-    width: 200,
-    left: 80,
-    top: -20,
-    height: 20,
+    top: -25,
+    marginLeft: 100,
+    marginRight: 10,
     backgroundColor: "yellow"
   },
   description: {
-    left: 80,
-    width: 200,
-    height: 80,
+    margin: 10,
     backgroundColor: "orange"
   },
   box: {
     flex: 1,
     flexDirection: "column",
-    height: 150,
     backgroundColor: "#F3D1B0",
     marginTop: 10,
     marginLeft: 10,
