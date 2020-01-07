@@ -5,6 +5,7 @@ import { NavigationActions } from "react-navigation";
 import { ScrollView, Text, View } from "react-native";
 import { DrawerNavigation } from "react-navigation";
 import { DrawerItems } from "react-navigation-drawer";
+
 class SideMenu extends Component {
   navigateToScreen = route => () => {
     const navigateAction = NavigationActions.navigate({

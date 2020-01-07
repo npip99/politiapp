@@ -1,19 +1,75 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Image } from "react-native";
+import List from "../components/List";
+import ExpandableList from "../components/ExpandableList";
 
-export default function App() {
+export default function Official(props) {
+  const listData = props.info.beliefs.map(belief => {
+    return {
+      title: belief.belief,
+      description:
+        "HAHA Description HAHA DescriptionHAHA DescriptionHAHA DescriptionHAHA DescriptionHAHA DescriptionHAHA DescriptionHAHA Description"
+    };
+  });
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <View style={styles.header}>
+        <View style={styles.imageContainer}>
+          <Image style={styles.image} source={{ uri: props.info.image }} />
+        </View>
+        <View style={styles.titleContainer}>
+          <Text style={styles.title}>{props.info.title}</Text>
+          <Text style={styles.description}>{props.info.description}</Text>
+        </View>
+      </View>
+
+      <ExpandableList info={listData}></ExpandableList>
     </View>
   );
 }
 
+function elevationShadowStyle(elevation) {
+  return {
+    elevation,
+    shadowColor: "black",
+    shadowOffset: { width: 0, height: 0.5 * elevation },
+    shadowOpacity: 0.3,
+    shadowRadius: 0.8 * elevation
+  };
+}
+
 const styles = StyleSheet.create({
+  header: {
+    flexDirection: "row"
+  },
+  imageContainer: {
+    margin: 20,
+    width: 100,
+    height: 100,
+    ...elevationShadowStyle(3)
+  },
+  titleContainer: {
+    flex: 1,
+    margin: 20
+  },
+  image: {
+    width: "100%",
+    height: "100%",
+    borderRadius: 15
+  },
+  title: {
+    width: "60%",
+    fontSize: 24
+  },
+  description: {
+    fontSize: 16,
+    marginTop: 15
+  },
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center"
+    width: "100%",
+    borderRadius: 5
   }
 });
+
