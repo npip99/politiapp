@@ -81,12 +81,22 @@ class ExpandableItemComponent extends Component {
 
 export default class ExpandableList extends Component {
   //Main View defined under this Class
-  constructor() {
+  constructor(props) {
     super();
     if (Platform.OS === "android") {
       UIManager.setLayoutAnimationEnabledExperimental(true);
     }
-    this.state = { listDataSource: CONTENT };
+    console.log("info expandable list", props);
+    this.state = {
+      listDataSource: props.info.map(item => ({
+        isExpanded: false,
+        category_name: item.title,
+        subcategory: [
+          { id: 1, val: "Sub Cat 1" },
+          { id: 3, val: "Sub Cat 3" }
+        ]
+      }))
+    };
   }
 
   updateLayout = index => {
