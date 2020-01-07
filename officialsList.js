@@ -130,10 +130,10 @@ var state = [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Senator_Rubio_official_portrait.jpg/440px-Senator_Rubio_official_portrait.jpg",
     beliefs: [
       {
-        belief: "I'm a state person"
+        belief: "Wants to reduce national debt, remove government deficit"
       },
       {
-        belief: "I'm a state person"
+        belief: "I'm a senator"
       }
     ]
   },
@@ -148,7 +148,7 @@ var state = [
         belief: "Believes that governments are inherently inefficient, and that private enterprise is better."
       },
       {
-        belief: "I'm a state person"
+        belief: "I'm a senator"
       }
     ]
   },
@@ -160,10 +160,10 @@ var state = [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Gov_Ron_DeSantis_Portrait.jpg/440px-Gov_Ron_DeSantis_Portrait.jpg",
     beliefs: [
       {
-        belief: "I'm a state person"
+        belief: "Supports term limits of 6 years for House of Representatives and 12 years for Senators. Currently, there are no term limits"
       },
       {
-        belief: "I'm a state person"
+        belief: "I'm the governor"
       }
     ]
   }

@@ -1,9 +1,19 @@
 import React from "react";
 import { StyleSheet, Text, View, Dimensions } from "react-native";
-import PieChart from "react-native-pie";
+import { PieChart } from "react-native-chart-kit";
 import List from "./List";
 
 export default function Budget(props) {
+  const chartConfig = {
+    backgroundGradientFrom: "#1E2923",
+    backgroundGradientFromOpacity: 0,
+    backgroundGradientTo: "#08130D",
+    backgroundGradientToOpacity: 0.5,
+    color: (opacity = 1) => `rgba(26, 255, 146, ${opacity})`,
+    strokeWidth: 2, // optional, default 3
+    barPercentage: 0.5
+  };
+
   const budgetData = [
     {
       name: "Education",
@@ -54,8 +64,10 @@ export default function Budget(props) {
   }
   const pieChartData = budgetData.map(budgetDatum => {
     return {
-      percentage: budgetDatum.budget / totalBudget * 100,
+      name: budgetDatum.name,
+      budget: budgetDatum.budget,
       color: budgetDatum.color,
+      key: budgetDatum.name,
     }
   });
   const listData = budgetData.map(budgetDatum => {
@@ -72,8 +84,15 @@ export default function Budget(props) {
     <View style={styles.container}>
       <View style={styles.pieChartContainer}>
         <PieChart
-          radius={100}
-          sections={pieChartData}
+          data={pieChartData}
+          width={200}
+          height={200}
+          accessor="budget"
+          backgroundColor={"transparent"}
+          chartConfig={chartConfig}
+          paddingLeft={50}
+          hasLegend={false}
+          absolute
         />
       </View>
       <View style={styles.listContainer}>
@@ -91,7 +110,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
   },
   pieChartContainer: {
-    marginVertical: 5,
   },
   listContainer: {
     flex: 1,

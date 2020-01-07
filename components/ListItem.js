@@ -8,12 +8,17 @@ function ListItemImage(props) {
         <Image style={styles.image} source={{ uri: props.image }} />
       </View>
     );
-  } else {
+  } else if (props.color) {
     return (
-      <View
-        style={{ ...styles.colorContainer, backgroundColor: props.color }}
-      ></View>
+      <View style={styles.imageContainer}>
+        <View
+          style={{ ...styles.colorContainer, backgroundColor: props.color }}
+        >
+        </View>
+      </View>
     );
+  } else {
+    return null;
   }
 }
 
@@ -32,9 +37,11 @@ export default function ListItem(props) {
   //info.description
   return (
     <View style={styles.container}>
-      <ListItemImage image={props.info.image} color={props.info.color} />
-      <Text style={styles.title}>{props.info.title}</Text>
-      <Text style={styles.description}>{props.info.description}</Text>
+      <ListItemImage image={props.info.image} color={props.info.color}/>
+      <View style={styles.infoContainer}>
+        <Text style={styles.title}>{props.info.title}</Text>
+        <Text style={styles.description}>{props.info.description}</Text>
+      </View>
     </View>
   );
 }
@@ -42,6 +49,7 @@ export default function ListItem(props) {
 const styles = StyleSheet.create({
   container: {
 //    backgroundColor: "#F3D1B0",
+    flexDirection: "row",
     marginVertical: 5,
     marginHorizontal: 10,
 
@@ -49,17 +57,16 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
   },
   imageContainer: {
-    left: 20,
-    top: 20,
-    width: 50,
-    height: 50
+    width: 60,
+    height: 60,
+    marginVertical: 15,
+    marginLeft: 25,
+    marginRight: 5,
   },
   colorContainer: {
-    left: 20,
-    top: 20,
-    width: 50,
-    height: 50,
-    borderRadius: 50
+    height: "100%",
+    width: "100%",
+    borderRadius: 50,
   },
   image: {
     width: "100%",
@@ -67,14 +74,12 @@ const styles = StyleSheet.create({
     borderRadius: 5
   },
   title: {
-    top: -25,
     fontSize: 22,
-    marginLeft: 100,
-    marginRight: 10,
-   // backgroundColor: "yellow"
+    marginTop: 15,
+    marginHorizontal: 20,
   },
   description: {
-    margin: 10,
-  //  backgroundColor: "orange"
+    margin: 20,
+    marginTop: 5,
   },
 });
