@@ -45,35 +45,57 @@
 import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
 import List from "../components/List";
+import ExpandableList from "../components/ExpandableList";
 export default function Detail(props) {
   //info.title
   //info.description
   const info = props.navigation.state.params.info;
-  console.log("info", info);
   const listData = info.beliefs.map(belief => {
     return {
       title: belief.belief,
-      description: ""
+      description:
+        "HAHA Description HAHA DescriptionHAHA DescriptionHAHA DescriptionHAHA DescriptionHAHA DescriptionHAHA DescriptionHAHA Description"
     };
   });
   return (
-    <View style={styles.box}>
-      <View style={styles.imageContainer}>
-        <Image style={styles.image} source={{ uri: info.image }} />
+    <View style={styles.container}>
+      <View style={styles.header}>
+        <View style={styles.imageContainer}>
+          <Image style={styles.image} source={{ uri: info.image }} />
+        </View>
+        <View style={styles.titleContainer}>
+          <Text style={styles.title}>{info.title}</Text>
+          <Text style={styles.description}>{info.description}</Text>
+        </View>
       </View>
-      <Text style={styles.title}>{info.title}</Text>
-      <Text style={styles.description}>{info.description}</Text>
-      <List data={listData} />
+
+      <ExpandableList info={listData}></ExpandableList>
     </View>
   );
 }
 
+function elevationShadowStyle(elevation) {
+  return {
+    elevation,
+    shadowColor: "black",
+    shadowOffset: { width: 0, height: 0.5 * elevation },
+    shadowOpacity: 0.3,
+    shadowRadius: 0.8 * elevation
+  };
+}
 const styles = StyleSheet.create({
+  header: {
+    flexDirection: "row"
+  },
   imageContainer: {
-    left: 20,
-    top: 20,
+    margin: 20,
     width: 100,
-    height: 100
+    height: 100,
+    ...elevationShadowStyle(3)
+  },
+  titleContainer: {
+    flex: 1,
+    margin: 20
   },
   image: {
     width: "100%",
@@ -82,23 +104,15 @@ const styles = StyleSheet.create({
   },
   title: {
     width: "60%",
-    left: 130,
-    top: -80,
-    height: 20,
-    backgroundColor: "yellow"
+    fontSize: 24
   },
   description: {
-    left: 130,
-    top: -70,
-    width: "60%",
-    height: 80,
-    backgroundColor: "orange"
+    fontSize: 16,
+    marginTop: 15
   },
-  box: {
+  container: {
     flex: 1,
     width: "100%",
-    height: 50,
-    backgroundColor: "#F3D1B0",
     borderRadius: 5
   }
 });
