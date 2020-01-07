@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View, Dimensions } from "react-native";
-import { PieChart } from "react-native-chart-kit";
+import PieChart from "react-native-pie";
 import List from "./List";
 
 export default function Budget(props) {
@@ -57,34 +57,50 @@ export default function Budget(props) {
       legendFontSize: 15
     }
   ];
+  let totalBudget = 0;
+  for(amount of budgetData.map(budgetDatum => budgetDatum.budget)) {
+    totalBudget += amount;
+  }
+  const pieChartData = budgetData.map(budgetDatum => {
+    return {
+      percentage: budgetDatum.budget / totalBudget * 100,
+      color: budgetDatum.color,
+    }
+  });
   const listData = budgetData.map(budgetDatum => {
     return {
+      key: budgetDatum.name,
       title: budgetDatum.name,
       description: budgetDatum.budget,
       color: budgetDatum.color
     };
   });
+
+  const pieChartWidth = Dimensions.get("window").width;
   return (
-    <View>
-      <PieChart
-        data={budgetData}
-        width={Dimensions.get("window").width}
-        height={250}
-        chartConfig={chartConfig}
-        accessor="budget"
-        backgroundColor="transparent"
-        paddingLeft="15"
-        hasLegend={false}
-        absolute
-      />
-      <Text>THIS IS THE GOVERNMENT BUDGET</Text>
-      <List data={listData} />
+    <View style={styles.container}>
+      <View style={styles.pieChartContainer}>
+        <PieChart
+          radius={100}
+          sections={pieChartData}
+        />
+      </View>
+      <View style={styles.listContainer}>
+        <List data={listData}/>
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flexDirection: "column",
+    alignItems: "center",
+  },
+  pieChartContainer: {
+    marginTop: 10,
+  },
+  listContainer: {
+    width: "100%",
   }
 });
