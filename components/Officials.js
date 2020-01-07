@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View, Button } from "react-native";
 import List from "./List";
-
+import { local, state } from "../officialsList";
 export default class Officials extends React.Component {
   constructor(props) {
     super(props);
@@ -24,27 +24,31 @@ export default class Officials extends React.Component {
   }
 
   render() {
+    var officials = [];
     if (this.props.screenProps.pageName == "Local") {
-      // Do local stuff
+      officials = local;
     } else {
-      // Do state stuff
+      officials = state;
     }
     return (
       <View>
         <Text>THIS IS THE LIST OF OFFICIALS</Text>
         <List
-          data={this.state.officials.map(official => {
+          data={officials.map(official => {
             return {
               key: official.id,
               title: official.name,
-              description: official.position
+              description: official.position,
+              image: official.image,
+              beliefs: official.beliefs
             };
           })}
-          onPress={key =>
+          onPress={x => {
             this.props.screenProps.navigation.navigate("Detail", {
-              name: "OFFICIAL" + key
-            })
-          }
+              info: x,
+              name: "OFFICIAL" + x.title
+            });
+          }}
         />
       </View>
     );

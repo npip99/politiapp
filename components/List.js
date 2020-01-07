@@ -9,10 +9,12 @@ export default function List(props) {
   return (
     <ScrollView style={styles.container}>
       <View>
-        <Text>List</Text>
         {props.data.map(x => {
           return (
-            <TouchableOpacity key={x.key} onPress={() => props.onPress(x.key)}>
+            <TouchableOpacity
+              key={x.key}
+              onPress={() => props.onPress && props.onPress(x)}
+            >
               <ListItem info={x} />
             </TouchableOpacity>
           );
