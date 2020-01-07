@@ -27,7 +27,8 @@ export default function List(props) {
 const styles = StyleSheet.create({
   container: {
     height: "100%",
-    width: "100%"
+    width: "100%",
+    backgroundColor: "blue"
     // justifyContent: "center",
   }
 });
