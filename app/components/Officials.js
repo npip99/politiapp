@@ -6,14 +6,36 @@ import { localOfficials, stateOfficials } from "../../api/officialsList";
 export default class Officials extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      state: {
+        fl: {
+          officials: [],
+          budget: []
+        }
+      },
+      local: {
+        "099": {
+          officials: [],
+          budget: []
+        }
+      }
+    };
+  }
+
+  async updateOfficialsInformation() {
+    fetch("http://localhost/state/fl")
+      .then(res => res.json())
+      .then(resJSON => {
+        console.log(resJSON);
+      });
   }
 
   render() {
     var officials = [];
     if (this.props.screenProps.pageName == "Local") {
-      officials = localOfficials;
+      officials = this.state.local;
     } else {
-      officials = stateOfficials;
+      officials = this.state.state;
     }
     return (
       <View style={styles.container}>

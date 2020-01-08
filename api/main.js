@@ -4,7 +4,7 @@ const port = 3000
 
 const {local, state} = require('./officialsList.js')
 
-app.get('/state/florida', (req, res) => {
+app.get('/state/fl', (req, res) => {
   res.send(JSON.stringify(state));
 });
 
