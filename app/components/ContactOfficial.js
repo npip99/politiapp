@@ -5,6 +5,7 @@ import Icon from "react-native-vector-icons/AntDesign";
 // import styles from "./SideMenu.style";
 import {
   ScrollView,
+  Alert,
   Text,
   View,
   StyleSheet,
@@ -55,10 +56,17 @@ class SideMenu extends Component {
                   borderColor: "gray",
                   borderWidth: 1
                 }}
-                placeholder="Type here to translate!"
+                placeholder="Write a message"
                 onChangeText={text => this.setState({ text })}
                 value={this.state.text}
               />
+              <Button
+                title="Submit"
+                onPress={() => {
+                  this.setState({ text: "" });
+                  Alert.alert("Submitted!!");
+                }}
+              ></Button>
             </View>
           </View>
         </Modal>
@@ -89,14 +97,13 @@ const styles = StyleSheet.create({
   },
   closeCircle: {
     left: "50%",
-    top: "-45%",
+    top: "-15%",
     marginLeft: -75
   },
   modal: {
     flex: 1,
     // paddingTop: 100,
     alignItems: "center",
-    backgroundColor: "yellow",
     justifyContent: "center"
   },
   text: {
