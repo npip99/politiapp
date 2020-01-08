@@ -41,7 +41,9 @@ function elevationShadowStyle(elevation) {
 
 const styles = StyleSheet.create({
   header: {
-    flexDirection: "row"
+    backgroundColor: "#f3f3f3",
+    flexDirection: "row",
+    ...elevationShadowStyle(3),
   },
   imageContainer: {
     margin: 20,
@@ -56,7 +58,7 @@ const styles = StyleSheet.create({
   image: {
     width: "100%",
     height: "100%",
-    borderRadius: 15
+    borderRadius: 15,
   },
   title: {
     width: "60%",

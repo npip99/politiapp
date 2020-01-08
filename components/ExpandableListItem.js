@@ -106,14 +106,26 @@ class ExpandableListItem extends Component {
   }
 }
 
+function elevationShadowStyle(elevation) {
+  return {
+    elevation,
+    shadowColor: 'black',
+    shadowOffset: { width: 0, height: 0.5 * elevation },
+    shadowOpacity: 0.3,
+    shadowRadius: 0.8 * elevation
+  };
+}
+
 var styles = StyleSheet.create({
   container: {
     backgroundColor: "#fff",
     margin: 10,
-    overflow: "hidden"
+    overflow: "hidden",
   },
   titleContainer: {
-    flexDirection: "row"
+    flexDirection: "row",
+    backgroundColor: "red",
+    ...elevationShadowStyle(3),
   },
   title: {
     flex: 1,

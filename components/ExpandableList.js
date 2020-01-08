@@ -11,7 +11,16 @@ import {
   TouchableOpacity,
   Platform
 } from "react-native";
-//import basic react native components
+
+function elevationShadowStyle(elevation) {
+  return {
+    elevation,
+    shadowColor: 'black',
+    shadowOffset: { width: 0, height: 0.5 * elevation },
+    shadowOpacity: 0.3,
+    shadowRadius: 0.8 * elevation
+  };
+}
 
 class ExpandableItemComponent extends Component {
   //Custom Component for the Expandable List
@@ -21,6 +30,7 @@ class ExpandableItemComponent extends Component {
       layoutHeight: 0
     };
   }
+
   componentWillReceiveProps(nextProps) {
     if (nextProps.item.isExpanded) {
       this.setState(() => {
@@ -44,8 +54,9 @@ class ExpandableItemComponent extends Component {
   }
 
   render() {
+    console.log(this.props);
     return (
-      <View>
+      <View style={{zIndex: 3}}>
         {/*Header of the Expandable List Item*/}
         <TouchableOpacity
           activeOpacity={0.8}
@@ -68,7 +79,7 @@ class ExpandableItemComponent extends Component {
               onPress={() => alert("Id: " + item.id + " val: " + item.val)}
             >
               <Text style={styles.text}>
-                {key}. {item.val}
+                {item.val}
               </Text>
               <View style={styles.separator} />
             </TouchableOpacity>
@@ -92,8 +103,8 @@ export default class ExpandableList extends Component {
         isExpanded: false,
         category_name: item.title,
         subcategory: [
-          { id: 1, val: "Sub Cat 1" },
-          { id: 3, val: "Sub Cat 3" }
+          { id: "Pros", val: "Pros - Governments have no competitive pressure like a private company does. If a private company or citizen can do the same thing for cheaper, he will compete with other private companies and force lower prices." },
+          { id: "Cons", val: "Cons - Large Instutions like Social Security are known to have very low administrative costs, on the order of 0.8%. This is commonly lower than the administrative costs of many smaller enterprises, and is lower than the profit margin of any private company." }
         ]
       }))
     };
@@ -138,25 +149,27 @@ export default class ExpandableList extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 30,
-    backgroundColor: "#F5FCFF"
+    backgroundColor: "#fff"
   },
   topHeading: {
     paddingLeft: 10,
     fontSize: 20
   },
   header: {
-    backgroundColor: "#F5FCFF",
-    padding: 16
+    backgroundColor: "#fff",
+    padding: 16,
+    borderBottomWidth: 1,
+    borderColor: "#ddd",
+    ...elevationShadowStyle(3),
   },
   headerText: {
     fontSize: 16,
     fontWeight: "500"
   },
   separator: {
-    height: 0.5,
-    backgroundColor: "#808080",
-    width: "95%",
+    height: 1,
+    backgroundColor: "#eee",
+    width: "100%",
     marginLeft: 16,
     marginRight: 16
   },
