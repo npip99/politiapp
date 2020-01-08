@@ -88,7 +88,7 @@ export default class Budget extends React.Component {
           />
         </View>
         <View style={styles.listContainer}>
-          <List data={listData} />
+          <List data={listData} type="budget" />
         </View>
       </View>
     );

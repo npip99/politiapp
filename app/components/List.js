@@ -8,7 +8,11 @@ export default function List(props) {
     <ScrollView style={styles.container}>
       <View>
         {props.data.map(x => {
-          return (
+          return props.type ? (
+            <View key={x.key} onPress={() => props.onPress && props.onPress(x)}>
+              <ListItem info={x} />
+            </View>
+          ) : (
             <TouchableOpacity
               key={x.key}
               onPress={() => props.onPress && props.onPress(x)}
