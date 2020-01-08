@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View, Button } from "react-native";
 import List from "./List";
-import { local, state } from "../officialsList";
+import { localOfficials, stateOfficials } from "../../api/officialsList";
 
 export default class Officials extends React.Component {
   constructor(props) {
@@ -11,9 +11,9 @@ export default class Officials extends React.Component {
   render() {
     var officials = [];
     if (this.props.screenProps.pageName == "Local") {
-      officials = local;
+      officials = localOfficials;
     } else {
-      officials = state;
+      officials = stateOfficials;
     }
     return (
       <View style={styles.container}>

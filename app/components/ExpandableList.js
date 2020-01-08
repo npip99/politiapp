@@ -15,7 +15,7 @@ import {
 function elevationShadowStyle(elevation) {
   return {
     elevation,
-    shadowColor: 'black',
+    shadowColor: "black",
     shadowOffset: { width: 0, height: 0.5 * elevation },
     shadowOpacity: 0.3,
     shadowRadius: 0.8 * elevation
@@ -56,7 +56,7 @@ class ExpandableItemComponent extends Component {
   render() {
     console.log(this.props);
     return (
-      <View style={{zIndex: 3}}>
+      <View style={{ zIndex: 3 }}>
         {/*Header of the Expandable List Item*/}
         <TouchableOpacity
           activeOpacity={0.8}
@@ -78,9 +78,7 @@ class ExpandableItemComponent extends Component {
               style={styles.content}
               onPress={() => alert("Id: " + item.id + " val: " + item.val)}
             >
-              <Text style={styles.text}>
-                {item.val}
-              </Text>
+              <Text style={styles.text}>{item.val}</Text>
               <View style={styles.separator} />
             </TouchableOpacity>
           ))}
@@ -103,8 +101,16 @@ export default class ExpandableList extends Component {
         isExpanded: false,
         category_name: item.title,
         subcategory: [
-          { id: "Pros", val: "Pros - Governments have no competitive pressure like a private company does. If a private company or citizen can do the same thing for cheaper, he will compete with other private companies and force lower prices." },
-          { id: "Cons", val: "Cons - Large Instutions like Social Security are known to have very low administrative costs, on the order of 0.8%. This is commonly lower than the administrative costs of many smaller enterprises, and is lower than the profit margin of any private company." }
+          {
+            id: "Pros",
+            val:
+              "Pros - Governments have no competitive pressure like a private company does. If a private company or citizen can do the same thing for cheaper, he will compete with other private companies and force lower prices."
+          },
+          {
+            id: "Cons",
+            val:
+              "Cons - Large Instutions like Social Security are known to have very low administrative costs, on the order of 0.8%. This is commonly lower than the administrative costs of many smaller enterprises, and is lower than the profit margin of any private company."
+          }
         ]
       }))
     };
@@ -135,7 +141,7 @@ export default class ExpandableList extends Component {
         <ScrollView>
           {this.state.listDataSource.map((item, key) => (
             <ExpandableItemComponent
-              key={item.category_name}
+              key={key}
               onClickFunction={this.updateLayout.bind(this, key)}
               item={item}
             />
@@ -160,7 +166,7 @@ const styles = StyleSheet.create({
     padding: 16,
     borderBottomWidth: 1,
     borderColor: "#ddd",
-    ...elevationShadowStyle(3),
+    ...elevationShadowStyle(3)
   },
   headerText: {
     fontSize: 16,
