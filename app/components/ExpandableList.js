@@ -117,7 +117,13 @@ export default class ExpandableList extends Component {
   }
 
   updateLayout = index => {
-    LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
+    LayoutAnimation.configureNext(
+      LayoutAnimation.create(
+        100,
+        LayoutAnimation.Types.easeInEaseOut,
+        LayoutAnimation.Properties.scaleXY
+      )
+    );
     const array = [...this.state.listDataSource];
     //For Single Expand at a time
     array.map((value, placeindex) =>
