@@ -1,4 +1,4 @@
-var local = [
+var localOfficials = [
   {
     id: 0,
     name: "Dave Kerner",
@@ -121,7 +121,7 @@ var local = [
   }
 ];
 
-var state = [
+var stateOfficials = [
   {
     id: 0,
     name: "Marco Rubio",
@@ -145,7 +145,8 @@ var state = [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Official_Portrait_of_Senator_Rick_Scott_%28R-FL%29.jpg/440px-Official_Portrait_of_Senator_Rick_Scott_%28R-FL%29.jpg",
     beliefs: [
       {
-        belief: "Believes that governments are inherently inefficient, and that private enterprise is better."
+        belief:
+          "Believes that governments are inherently inefficient, and that private enterprise is better."
       },
       {
         belief: "I'm a senator"
@@ -160,7 +161,8 @@ var state = [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Gov_Ron_DeSantis_Portrait.jpg/440px-Gov_Ron_DeSantis_Portrait.jpg",
     beliefs: [
       {
-        belief: "Supports term limits of 6 years for House of Representatives and 12 years for Senators. Currently, there are no term limits"
+        belief:
+          "Supports term limits of 6 years for House of Representatives and 12 years for Senators. Currently, there are no term limits"
       },
       {
         belief: "I'm the governor"
@@ -169,5 +171,4 @@ var state = [
   }
 ];
 
-module.exports = { local, state };
-
+module.exports = { localOfficials, stateOfficials };

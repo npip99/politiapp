@@ -1,16 +1,24 @@
-const express = require('express')
-const app = express()
-const port = 3000
+const express = require("express");
+const app = express();
+const port = 3000;
 
-const {local, state} = require('./officialsList.js')
+const { localOfficials, stateOfficials } = require("./officialsList.js");
+const { localBudget, stateBudget } = require("./budgetList.js");
 
-app.get('/state/fl', (req, res) => {
-  res.send(JSON.stringify(state));
+app.get("/state/fl/officials", (req, res) => {
+  res.send(JSON.stringify(stateOfficials));
 });
 
-app.get("/county/099", (req, res) => {
-  res.send(JSON.stringify(local));
-})
+app.get("/county/099/officials", (req, res) => {
+  res.send(JSON.stringify(localOfficials));
+});
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.get("/state/fl/budget", (req, res) => {
+  res.send(JSON.stringify(stateBudget));
+});
 
+app.get("/county/099/budget", (req, res) => {
+  res.send(JSON.stringify(localBudget));
+});
+
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));

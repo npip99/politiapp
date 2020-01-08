@@ -45,14 +45,14 @@ var localBudget = [
 var stateBudget = [
   {
     name: "Education",
-    budget: 21500000,
+    budget: 0,
     color: "rgba(131, 167, 234, 1)",
     legendFontColor: "#7F7F7F",
     legendFontSize: 15
   },
   {
     name: "Transportation",
-    budget: 2800000,
+    budget: 0,
     color: "#F00",
     legendFontColor: "#7F7F7F",
     legendFontSize: 15

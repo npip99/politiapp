@@ -10,11 +10,13 @@ import {
   StyleSheet,
   Modal,
   TouchableHighlight,
-  Button
+  Button,
+  TextInput
 } from "react-native";
 class SideMenu extends Component {
   state = {
-    modalVisible: false
+    modalVisible: false,
+    text: ""
   };
   toggleModal(visible) {
     this.setState({ modalVisible: visible });
@@ -34,7 +36,6 @@ class SideMenu extends Component {
         >
           <View style={styles.modal}>
             <Text style={styles.text}>{this.props.officialInfo.title}</Text>
-
             <View style={styles.closeCircle}>
               <Icon
                 name="closecircleo"
@@ -45,16 +46,20 @@ class SideMenu extends Component {
                 }}
               />
             </View>
-            <TouchableHighlight>
-              <Text style={styles.text}>
-                <Button
-                  title="Close modal"
-                  onPress={() => {
-                    this.toggleModal(!this.state.modalVisible);
-                  }}
-                />
-              </Text>
-            </TouchableHighlight>
+            <View style={{ padding: 10, width: "100%" }}>
+              <TextInput
+                multiline={true}
+                style={{
+                  height: "45%",
+                  width: "100%",
+                  borderColor: "gray",
+                  borderWidth: 1
+                }}
+                placeholder="Type here to translate!"
+                onChangeText={text => this.setState({ text })}
+                value={this.state.text}
+              />
+            </View>
           </View>
         </Modal>
 
@@ -91,6 +96,7 @@ const styles = StyleSheet.create({
     flex: 1,
     // paddingTop: 100,
     alignItems: "center",
+    backgroundColor: "yellow",
     justifyContent: "center"
   },
   text: {
