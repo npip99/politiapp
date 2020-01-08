@@ -2,7 +2,6 @@ import React from "react";
 import { StyleSheet, View, ScrollView } from "react-native";
 import ListItem from "./ListItem";
 import { TouchableOpacity } from "react-native-gesture-handler";
-
 export default function List(props) {
   return (
     <ScrollView style={styles.container}>

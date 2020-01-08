@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
 import List from "../components/List";
 import ExpandableList from "../components/ExpandableList";
-
+import ContactOfficial from "./ContactOfficial";
 export default function Official(props) {
   const listData = props.info.beliefs.map(belief => {
     return {
@@ -24,7 +24,10 @@ export default function Official(props) {
         </View>
       </View>
 
-      <ExpandableList info={listData}></ExpandableList>
+      <ExpandableList
+        beliefs={listData}
+        officialInfo={props.info}
+      ></ExpandableList>
     </View>
   );
 }
@@ -43,7 +46,7 @@ const styles = StyleSheet.create({
   header: {
     backgroundColor: "#f3f3f3",
     flexDirection: "row",
-    ...elevationShadowStyle(3),
+    ...elevationShadowStyle(3)
   },
   imageContainer: {
     margin: 20,
@@ -58,7 +61,7 @@ const styles = StyleSheet.create({
   image: {
     width: "100%",
     height: "100%",
-    borderRadius: 15,
+    borderRadius: 15
   },
   title: {
     width: "60%",
@@ -74,4 +77,3 @@ const styles = StyleSheet.create({
     borderRadius: 5
   }
 });
-

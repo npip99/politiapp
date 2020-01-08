@@ -1,5 +1,6 @@
 /*Example of Expandable ListView in React Native*/
 import React, { Component } from "react";
+import ContactOfficial from "./ContactOfficial";
 //import react in our project
 import {
   LayoutAnimation,
@@ -68,7 +69,8 @@ class ExpandableItemComponent extends Component {
         <View
           style={{
             height: this.state.layoutHeight,
-            overflow: "hidden"
+            overflow: "hidden",
+            backgroundColor: "blue"
           }}
         >
           {/*Content under the header of the Expandable List Item*/}
@@ -97,7 +99,7 @@ export default class ExpandableList extends Component {
     }
     console.log("info expandable list", props);
     this.state = {
-      listDataSource: props.info.map(item => ({
+      listDataSource: props.beliefs.map(item => ({
         isExpanded: false,
         category_name: item.title,
         subcategory: [
@@ -152,6 +154,9 @@ export default class ExpandableList extends Component {
               item={item}
             />
           ))}
+          <ContactOfficial
+            officialInfo={this.props.officialInfo}
+          ></ContactOfficial>
         </ScrollView>
       </View>
     );
@@ -194,7 +199,7 @@ const styles = StyleSheet.create({
     // paddingBosubcategory: 10,
     paddingLeft: 10,
     paddingRight: 10,
-    backgroundColor: "#fff"
+    backgroundColor: "blue"
   }
 });
 
