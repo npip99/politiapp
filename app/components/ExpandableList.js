@@ -76,7 +76,7 @@ class ExpandableItemComponent extends Component {
             <TouchableOpacity
               key={key}
               style={styles.content}
-              onPress={() => alert("Id: " + item.id + " val: " + item.val)}
+              // onPress={() => alert("Id: " + item.id + " val: " + item.val)}
             >
               <Text style={styles.text}>{item.val}</Text>
               <View style={styles.separator} />
