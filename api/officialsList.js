@@ -169,5 +169,5 @@ var state = [
   }
 ];
 
-export { local, state };
+module.exports = { local, state };
 
