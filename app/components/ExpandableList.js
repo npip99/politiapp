@@ -73,14 +73,14 @@ class ExpandableItemComponent extends Component {
         >
           {/*Content under the header of the Expandable List Item*/}
           {this.props.item.subcategory.map((item, key) => (
-            <TouchableOpacity
+            <View
               key={key}
               style={styles.content}
               // onPress={() => alert("Id: " + item.id + " val: " + item.val)}
             >
               <Text style={styles.text}>{item.val}</Text>
               <View style={styles.separator} />
-            </TouchableOpacity>
+            </View>
           ))}
         </View>
       </View>
