@@ -1,41 +1,45 @@
 import React from "react";
 import { StyleSheet, Text, View, Button } from "react-native";
 import List from "./List";
-import { localOfficials, stateOfficials } from "../../api/officialsList";
+// import { localOfficials, stateOfficials } from "../../api/officialsList";
 
 export default class Officials extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       state: {
-        fl: {
-          officials: [],
-          budget: []
-        }
+        officials: [],
+        budget: []
       },
       local: {
-        "099": {
-          officials: [],
-          budget: []
-        }
+        officials: [],
+        budget: []
       }
     };
+    this.updateOfficialsInformation();
   }
 
   async updateOfficialsInformation() {
-    fetch("http://localhost/state/fl")
+    fetch("http://localhost:3000/state/fl/officials")
       .then(res => res.json())
       .then(resJSON => {
         console.log(resJSON);
+        this.setState({ state: { ...this.state.state, officials: resJSON } });
+      });
+    fetch("http://localhost:3000/county/099/officials")
+      .then(res => res.json())
+      .then(resJSON => {
+        console.log(resJSON);
+        this.setState({ local: { ...this.state.local, officials: resJSON } });
       });
   }
 
   render() {
     var officials = [];
     if (this.props.screenProps.pageName == "Local") {
-      officials = this.state.local;
+      officials = this.state.local.officials;
     } else {
-      officials = this.state.state;
+      officials = this.state.state.officials;
     }
     return (
       <View style={styles.container}>
