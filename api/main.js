@@ -8,6 +8,8 @@ const { localBudget, stateBudget } = require("./budgetList.js");
 const list = [];
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+const events = require("./eventsList.js");
+
 app.get("/state/fl/officials", (req, res) => {
   res.send(JSON.stringify(stateOfficials));
 });
@@ -31,6 +33,8 @@ app.post("/contact", (req, res) => {
 });
 app.get("/contact", (req, res) => {
   res.send(JSON.stringify(list));
+app.get("/county/099/events", (req, res) => {
+  res.send(JSON.stringify(events));
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));

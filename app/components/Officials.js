@@ -53,6 +53,7 @@ export default class Officials extends React.Component {
           })}
           onPress={x => {
             this.props.screenProps.navigation.navigate("Detail", {
+              official: true,
               info: x,
               name: "OFFICIAL" + x.title
             });

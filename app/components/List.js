@@ -7,7 +7,7 @@ export default function List(props) {
     <ScrollView style={styles.container}>
       <View>
         {props.data.map(x => {
-          return props.type ? (
+          return props.unclickable ? (
             <View key={x.key} onPress={() => props.onPress && props.onPress(x)}>
               <ListItem info={x} />
             </View>

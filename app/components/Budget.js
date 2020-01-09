@@ -86,7 +86,7 @@ export default class Budget extends React.Component {
           />
         </View>
         <View style={styles.listContainer}>
-          <List data={listData} type="budget" />
+          <List data={listData} unclickable />
         </View>
       </View>
     );
