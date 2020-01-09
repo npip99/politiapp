@@ -53,26 +53,29 @@ class SideMenu extends Component {
           }}
         >
           <View style={styles.modal}>
-            <Text style={styles.text}>To: {this.props.officialInfo.title}</Text>
-            <View style={styles.closeCircle}>
-              <Icon
-                name="closecircleo"
-                size={30}
-                color="#900"
-                onPress={() => {
-                  this.toggleModal(!this.state.modalVisible);
-                }}
-              />
+            <View style={styles.header}>
+              <Text style={styles.text}>
+                To: {this.props.officialInfo.title}
+              </Text>
+              <View style={styles.closeCircle}>
+                <Icon
+                  name="closecircleo"
+                  size={30}
+                  color="#900"
+                  onPress={() => {
+                    this.toggleModal(!this.state.modalVisible);
+                  }}
+                />
+              </View>
             </View>
+
             <TextInput
               autoFocus={this.state.submitted ? false : true}
               multiline={true}
               ref={input => (this.input = input)}
               style={{
-                width: "100%",
-                margin: 20
-                // borderColor: "gray",
-                // borderWidth: 1
+                marginLeft: 20,
+                marginRight: 20
               }}
               placeholder="Write a message"
               onChangeText={text => this.setState({ text })}
@@ -89,7 +92,7 @@ class SideMenu extends Component {
                 );
                 setTimeout(() => {
                   //... open your alert here https://github.com/facebook/react-native/issues/17356
-                  Alert.alert("sub", "My Alert Msg", [
+                  Alert.alert("Submit", "Send the message?", [
                     {
                       text: "Ok",
                       onPress: () => {
@@ -124,12 +127,27 @@ class SideMenu extends Component {
 export default SideMenu;
 
 const styles = StyleSheet.create({
+  header: {
+    // flex: 1,
+    // flexDirection: "row",
+    marginTop: 60,
+    height: 90,
+    padding: 25,
+    width: "100%"
+  },
   container: {
     flex: 1,
     flexDirection: "column"
   },
   closeCircle: {
-    left: "90%"
+    left: "100%",
+    marginTop: -25,
+    marginLeft: -15
+    // left:
+    // left: "100%",
+    // marginLeft: -55
+    // marginTop: 60
+    // marginLeft: 20
     // marginL
     // left: "50%",
     // top: "-15%",
@@ -142,12 +160,11 @@ const styles = StyleSheet.create({
     // justifyContent: "center"
   },
   text: {
-    color: "#3f2949",
-    marginLeft: 20,
-    marginTop: 60,
+    // color: "#3f2949",
+    // marginLeft: 20,
+    // marginTop: 60
     // marginTop: 10,
-    alignItems: "center",
-    justifyContent: "center"
+    // justifyContent: "center"
   },
   titleContainer: {
     height: 100,
