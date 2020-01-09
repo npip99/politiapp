@@ -47,23 +47,14 @@ export default class About extends Component {
               Contact us at info@politiapp.com{"\n"}
             </Text>
             <Text style={styles.text}>{"\u00A9"} 2020 Politiapp</Text>
-            <View style={styles.closeCircle}>
-              <Icon
-                name="closecircleo"
-                size={30}
-                color="#900"
+
+            <TouchableHighlight>
+              <Button
+                title="Close"
                 onPress={() => {
                   this.toggleModal(!this.state.modalVisible);
                 }}
               />
-            </View>
-            <TouchableHighlight>
-                <Button
-                  title="Close modal"
-                  onPress={() => {
-                    this.toggleModal(!this.state.modalVisible);
-                  }}
-                />
             </TouchableHighlight>
           </View>
         </Modal>
