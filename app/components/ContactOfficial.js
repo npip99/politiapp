@@ -27,6 +27,26 @@ class SideMenu extends Component {
   handleAlert = () => {
     Alert.alert("Submitted!!");
   };
+
+  postContact = (official, content) => {
+    console.log("postContact", official, content);
+    fetch("http://localhost:3000/contact", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        a: "abc",
+        official: official,
+        content: content
+      })
+    })
+      .then(res => res.json())
+      .then(resJSON => {
+        console.log("resJSON", resJSON);
+      });
+  };
   render() {
     return (
       <ScrollView keyboardShouldPersistTaps="handled">
@@ -74,6 +94,10 @@ class SideMenu extends Component {
                 );
                 this.setState({ text: "", submitted: true });
                 Keyboard.dismiss();
+                this.postContact(
+                  this.props.officialInfo.title,
+                  this.state.text
+                );
                 setTimeout(() => {
                   //... open your alert here https://github.com/facebook/react-native/issues/17356
                   Alert.alert("sub", "My Alert Msg", [
