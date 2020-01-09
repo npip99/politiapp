@@ -42,6 +42,7 @@ var localOfficials = [
       }
     ],
   }
+
   {
     id: 0,
     name: "Dave Kerner",
@@ -50,10 +51,10 @@ var localOfficials = [
       "http://discover.pbcgov.org/countycommissioners/SiteImages/portraits/Dave_Kerner_d3.jpg",
     beliefs: [
       {
-        belief: "I'm a county commissioner"
+        belief: "Opposes many National Rifle Association sponsored legislations despite having a background as a police officer "
       },
       {
-        belief: "I'm a county commissioner"
+        belief: "Opposes human trafficking -- Authored legislation with State Senator Joseph Abruzzo that would 'sever the parental rights of a rapist if a child is conceived as a result of the attack.' (in some cases, rapists could sue for custody of children that were the products of the rapes that they committed)"
       }
     ]
   },
@@ -65,10 +66,10 @@ var localOfficials = [
       "http://discover.pbcgov.org/countycommissioners/SiteImages/portraits/d4-rweinroth.jpg",
     beliefs: [
       {
-        belief: "I'm a county commissioner"
+        belief: "Broad background in business management"
       },
       {
-        belief: "I'm a county commissioner"
+        belief: "President of two homeowners association"
       }
     ]
   },
