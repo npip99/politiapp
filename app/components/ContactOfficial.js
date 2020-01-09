@@ -28,9 +28,6 @@ class SideMenu extends Component {
     Alert.alert("Submitted!!");
   };
   render() {
-    if (this.input) {
-      console.log("render focus", this.input.isFocused());
-    }
     return (
       <ScrollView keyboardShouldPersistTaps="handled">
         <Modal
