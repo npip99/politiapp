@@ -33,16 +33,13 @@ class EventsList extends React.Component {
               return {
                 key: event.id,
                 title: event.title,
-                body: event.body,
+                event: event,
               };
             })}
             onPress={x => {
               this.props.screenProps.navigation.navigate("Detail", {
                 event: true,
-                info: {
-                  title: x.title,
-                  body: x.body,
-                }
+                info: x.event,
               })
             }}
         />
