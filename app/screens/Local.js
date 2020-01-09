@@ -34,8 +34,19 @@ const stackNav = createStackNavigator({
   },
   Detail: {
     screen: Detail,
+    header: ({ goBack }) => ({
+      left: (
+        <Icon
+          name={"chevron-left"}
+          onPress={() => {
+            goBack();
+          }}
+        />
+      )
+    }),
     navigationOptions: ({ navigation }) => ({
-      title: "Detail"
+      title: "",
+      headerBackTitle: " "
     })
   }
 });

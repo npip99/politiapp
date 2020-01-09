@@ -68,7 +68,7 @@ export default class ContactOfficial extends Component {
                 <Icon
                   name="closecircleo"
                   size={30}
-                  color="#900"
+                  color="#147EFB"
                   onPress={() => {
                     this.toggleModal(!this.state.modalVisible);
                   }}
@@ -145,6 +145,7 @@ const styles = StyleSheet.create({
   },
   closeCircle: {
     left: "100%",
+    color: "#5FC9F8",
     marginTop: -25,
     marginLeft: -15
   },
@@ -163,4 +164,3 @@ const styles = StyleSheet.create({
     marginTop: 45
   }
 });
-
