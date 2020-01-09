@@ -10,15 +10,15 @@ import Events from "./screens/Events";
 
 const App = createDrawerNavigator(
   {
+    Events: {
+      screen: Events
+    },
     State: {
       screen: State
     },
     Local: {
       screen: Local
     },
-    Events: {
-      screen: Events
-    }
   },
   {
     contentComponent: SideMenu,

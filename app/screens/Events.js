@@ -10,8 +10,9 @@ import {
 
 import { createStackNavigator } from "react-navigation-stack";
 import IOSIcon from "react-native-vector-icons/Ionicons";
-import PoliticalInfo from "../components/PoliticalInfo";
 import Detail from "./Detail";
+import PoliticalInfo from "../components/PoliticalInfo";
+import EventsList from "../components/EventsList";
 
 const stackNav = createStackNavigator({
   Main: {

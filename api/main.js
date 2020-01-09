@@ -27,12 +27,12 @@ app.get("/county/099/budget", (req, res) => {
 });
 
 app.post("/contact", (req, res) => {
-  console.log("req.body", req.body);
   list.push(req.body);
   res.send(JSON.stringify(req.body));
 });
 app.get("/contact", (req, res) => {
   res.send(JSON.stringify(list));
+});
 app.get("/county/099/events", (req, res) => {
   res.send(JSON.stringify(events));
 });

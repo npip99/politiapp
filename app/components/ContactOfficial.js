@@ -53,7 +53,7 @@ class SideMenu extends Component {
           }}
         >
           <View style={styles.modal}>
-            <Text style={styles.text}>{this.props.officialInfo.title}</Text>
+            <Text style={styles.text}>To: {this.props.officialInfo.title}</Text>
             <View style={styles.closeCircle}>
               <Icon
                 name="closecircleo"
@@ -69,11 +69,10 @@ class SideMenu extends Component {
               multiline={true}
               ref={input => (this.input = input)}
               style={{
-                height: 100,
                 width: "100%",
-                borderColor: "gray",
-                backgroundColor: "blue",
-                borderWidth: 1
+                margin: 20
+                // borderColor: "gray",
+                // borderWidth: 1
               }}
               placeholder="Write a message"
               onChangeText={text => this.setState({ text })}
@@ -82,7 +81,7 @@ class SideMenu extends Component {
             <Button
               title="Submit"
               onPress={() => {
-                this.setState({ text: "", submitted: true });
+                this.setState({ submitted: true });
                 Keyboard.dismiss();
                 this.postContact(
                   this.props.officialInfo.title,
@@ -95,6 +94,7 @@ class SideMenu extends Component {
                       text: "Ok",
                       onPress: () => {
                         Keyboard.dismiss();
+                        this.setState({ text: "" });
                         this.toggleModal(!this.state.modalVisible);
                       }
                     }
@@ -129,18 +129,22 @@ const styles = StyleSheet.create({
     flexDirection: "column"
   },
   closeCircle: {
-    left: "50%",
-    top: "-15%",
-    marginLeft: -75
+    left: "90%"
+    // marginL
+    // left: "50%",
+    // top: "-15%",
+    // marginLeft: -75
   },
   modal: {
-    flex: 1,
+    flex: 1
     // paddingTop: 100,
-    alignItems: "center",
-    justifyContent: "center"
+    // alignItems: "center",
+    // justifyContent: "center"
   },
   text: {
     color: "#3f2949",
+    marginLeft: 20,
+    marginTop: 60,
     // marginTop: 10,
     alignItems: "center",
     justifyContent: "center"

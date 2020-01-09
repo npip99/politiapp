@@ -1,7 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View, Button } from "react-native";
 import List from "./List";
-// import { localOfficials, stateOfficials } from "../../api/officialsList";
 
 export default class Officials extends React.Component {
   constructor(props) {
@@ -39,7 +38,7 @@ export default class Officials extends React.Component {
     } else {
       officials = this.state.state.officials;
     }
-    console.log("officials", officials);
+
     return (
       <View style={styles.container}>
         <List

@@ -35,8 +35,10 @@ class EventsList extends React.Component {
             onPress={x => {
               this.props.screenProps.navigation.navigate("Detail", {
                 event: true,
-                body: x.body,
-                name: "OFFICIAL" + x.title
+                info: {
+                  title: x.title,
+                  body: x.body,
+                }
               })
             }}
         />
@@ -52,4 +54,5 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Events;
+export default EventsList;
+
