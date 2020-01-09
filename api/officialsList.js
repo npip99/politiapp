@@ -168,8 +168,55 @@ var stateOfficials = [
         belief: "I'm the governor"
       }
     ]
+  },
+  {
+    id: 2,
+    name: "Ashley Moody",
+    position: "Attorney General",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/AttorneyGeneral_AshleyMoody.jpg/440px-AttorneyGeneral_AshleyMoody.jpg",
+    beliefs: [
+      {
+        belief:
+          "Supports term limits of 6 years for House of Representatives and 12 years for Senators. Currently, there are no term limits"
+      },
+      {
+        belief: "I'm the governor"
+      }
+    ]
+  },
+  {
+    id: 2,
+    name: "Jimmy Patronis",
+    position: "Chief Financial Officer",
+    image:
+      "https://www.myfloridacfo.com/division/COS/images/CFO-Patronis4x6.jpg",
+    beliefs: [
+      {
+        belief:
+          "Supports term limits of 6 years for House of Representatives and 12 years for Senators. Currently, there are no term limits"
+      },
+      {
+        belief: "I'm the governor"
+      }
+    ]
+  },
+  {
+    id: 2,
+    name: "Nikki Fried",
+    position: "Commissioner of Agriculture ",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Commissioner_Fried_portrait.jpg/440px-Commissioner_Fried_portrait.jpg",
+    beliefs: [
+      {
+        belief:
+          "Supports term limits of 6 years for House of Representatives and 12 years for Senators. Currently, there are no term limits"
+      },
+      {
+        belief: "I'm the governor"
+      }
+    ]
   }
 ];
 
 module.exports = { localOfficials, stateOfficials };
-
