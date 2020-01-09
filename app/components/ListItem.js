@@ -33,8 +33,6 @@ function elevationShadowStyle(elevation) {
 }
 
 export default function ListItem(props) {
-  //info.title
-  //info.description
   return (
     <View style={styles.container}>
       <ListItemImage image={props.info.image} color={props.info.color}/>

@@ -6,6 +6,7 @@ import SideMenu from "./components/SideMenu";
 import IOSIcon from "react-native-vector-icons/Ionicons";
 import State from "./screens/State";
 import Local from "./screens/Local";
+import Events from "./screens/Events";
 
 const App = createDrawerNavigator(
   {
@@ -14,6 +15,9 @@ const App = createDrawerNavigator(
     },
     Local: {
       screen: Local
+    },
+    Events: {
+      screen: Events
     }
   },
   {

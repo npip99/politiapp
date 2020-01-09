@@ -23,13 +23,11 @@ export default class Budget extends React.Component {
     fetch("http://localhost:3000/state/fl/budget")
       .then(res => res.json())
       .then(resJSON => {
-        console.log(resJSON);
         this.setState({ state: { ...this.state.state, budget: resJSON } });
       });
     fetch("http://localhost:3000/county/099/budget")
       .then(res => res.json())
       .then(resJSON => {
-        console.log(resJSON);
         this.setState({ local: { ...this.state.local, budget: resJSON } });
       });
   }
@@ -88,7 +86,7 @@ export default class Budget extends React.Component {
           />
         </View>
         <View style={styles.listContainer}>
-          <List data={listData} type="budget" />
+          <List data={listData} unclickable />
         </View>
       </View>
     );
