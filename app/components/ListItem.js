@@ -46,18 +46,16 @@ export default function ListItem(props) {
 
 const styles = StyleSheet.create({
   container: {
-//    backgroundColor: "#F3D1B0",
     flexDirection: "row",
     marginVertical: 5,
     marginHorizontal: 10,
 
     ...elevationShadowStyle(3),
-    backgroundColor: "#fff",
   },
   imageContainer: {
     width: 60,
     height: 60,
-    marginVertical: 15,
+    marginVertical: 16,
     marginLeft: 25,
     marginRight: 5,
   },
@@ -77,7 +75,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
   },
   description: {
-    margin: 20,
     marginTop: 5,
+    marginHorizontal: 20,
   },
 });

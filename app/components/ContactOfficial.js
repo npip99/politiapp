@@ -43,9 +43,11 @@ export default class ContactOfficial extends Component {
         content: content
       })
     })
-      .then(res => res.json())
-      .then(resJSON => {})
-      .catch(err => console.log(err));
+    .then(res => res.json())
+    .then(resJSON => {
+      console.log("Contact response: ", resJSON);
+    })
+    .catch(err => console.log(err));
   };
 
   render() {
@@ -99,7 +101,7 @@ export default class ContactOfficial extends Component {
                 );
                 setTimeout(() => {
                   //... open your alert here https://github.com/facebook/react-native/issues/17356
-                  Alert.alert("Your message has been sent!", "", [
+                  Alert.alert("Your message has been sent!", null, [
                     {
                       text: "Ok",
                       onPress: () => {
