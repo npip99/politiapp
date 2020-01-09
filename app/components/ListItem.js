@@ -13,8 +13,7 @@ function ListItemImage(props) {
       <View style={styles.imageContainer}>
         <View
           style={{ ...styles.colorContainer, backgroundColor: props.color }}
-        >
-        </View>
+        ></View>
       </View>
     );
   } else {
@@ -25,7 +24,7 @@ function ListItemImage(props) {
 function elevationShadowStyle(elevation) {
   return {
     elevation,
-    shadowColor: 'black',
+    shadowColor: "black",
     shadowOffset: { width: 0, height: 0.5 * elevation },
     shadowOpacity: 0.3,
     shadowRadius: 0.8 * elevation
@@ -35,7 +34,7 @@ function elevationShadowStyle(elevation) {
 export default function ListItem(props) {
   return (
     <View style={styles.container}>
-      <ListItemImage image={props.info.image} color={props.info.color}/>
+      <ListItemImage image={props.info.image} color={props.info.color} />
       <View style={styles.infoContainer}>
         <Text style={styles.title}>{props.info.title}</Text>
         <Text style={styles.description}>{props.info.description}</Text>
@@ -49,20 +48,20 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     marginVertical: 5,
     marginHorizontal: 10,
-
-    ...elevationShadowStyle(3),
+    // backgroundColor: "blue",
+    ...elevationShadowStyle(3)
   },
   imageContainer: {
     width: 60,
     height: 60,
     marginVertical: 16,
     marginLeft: 25,
-    marginRight: 5,
+    marginRight: 5
   },
   colorContainer: {
     height: "100%",
     width: "100%",
-    borderRadius: 50,
+    borderRadius: 50
   },
   image: {
     width: "100%",
@@ -72,10 +71,10 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 22,
     marginTop: 15,
-    marginHorizontal: 20,
+    marginHorizontal: 20
   },
   description: {
     marginTop: 5,
-    marginHorizontal: 20,
-  },
+    marginHorizontal: 20
+  }
 });
