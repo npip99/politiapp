@@ -4,7 +4,6 @@ var events = [
     title: "Governor DeSantis supports California's Fair Pay to Play Act",
     date: "January 9th, 2020",
     body: `
-
     The NCAA has a long-standing ban on college football players receiving advertising compensation. For example, it is against the NCAA rules for a player to host their own YouTube channel, and use their own name and likeness for ad revenue.
 
     California changed this by passing the Fair Pay to Play Act on September 30th, 2019. This bypasses the NCAA's rules by giving all college football players the right to collect ad revenues and hire their own personal advertising agents. Mark Emmert, the NCAA president, threatened to ban California from the NCAA if they continued with the ruling. Having passed the law, it appears the NCAA has made no reaction in the wake of it.
