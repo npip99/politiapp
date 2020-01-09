@@ -1,9 +1,5 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
-// import styles from "./SideMenu.style";
-import { NavigationActions } from "react-navigation";
-
-import About from "./About";
 import {
   ScrollView,
   Text,
@@ -12,8 +8,12 @@ import {
   Modal,
   TouchableHighlight
 } from "react-native";
+import { NavigationActions } from "react-navigation";
 import { DrawerNavigation } from "react-navigation";
 import { DrawerItems } from "react-navigation-drawer";
+
+import About from "./About";
+
 
 class SideMenu extends Component {
   navigateToScreen = route => () => {
@@ -43,7 +43,7 @@ class SideMenu extends Component {
 
         <View style={styles.footer}>
           <View style={styles.footerInner}>
-            <About></About>
+            <About/>
             <Text>{"\u00A9"} 2020 Politiapp</Text>
           </View>
         </View>

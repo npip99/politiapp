@@ -1,6 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View, Button } from "react-native";
 import List from "./List";
+import Config from '../Config';
 
 export default class Officials extends React.Component {
   constructor(props) {
@@ -19,15 +20,21 @@ export default class Officials extends React.Component {
   }
 
   async updateOfficialsInformation() {
-    fetch("http://localhost:3000/state/fl/officials")
+    fetch(Config.hostname + "/state/fl/officials")
       .then(res => res.json())
       .then(resJSON => {
         this.setState({ state: { ...this.state.state, officials: resJSON } });
+      })
+      .catch(err => {
+        console.log(err);
       });
-    fetch("http://localhost:3000/county/099/officials")
+    fetch(Config.hostname + "/county/099/officials")
       .then(res => res.json())
       .then(resJSON => {
         this.setState({ local: { ...this.state.local, officials: resJSON } });
+      })
+      .catch(err => {
+        console.log(err);
       });
   }
 

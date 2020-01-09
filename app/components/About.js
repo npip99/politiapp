@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import Icon from "react-native-vector-icons/AntDesign";
 
-// import styles from "./SideMenu.style";
 import {
   ScrollView,
   Text,
@@ -12,7 +11,8 @@ import {
   TouchableHighlight,
   Button
 } from "react-native";
-class SideMenu extends Component {
+
+export default class About extends Component {
   //   navigateToScreen = route => () => {
   //     const navigateAction = NavigationActions.navigate({
   //       routeName: route
@@ -22,6 +22,7 @@ class SideMenu extends Component {
   state = {
     modalVisible: false
   };
+
   toggleModal(visible) {
     this.setState({ modalVisible: visible });
   }
@@ -57,14 +58,12 @@ class SideMenu extends Component {
               />
             </View>
             <TouchableHighlight>
-              <Text style={styles.text}>
                 <Button
                   title="Close modal"
                   onPress={() => {
                     this.toggleModal(!this.state.modalVisible);
                   }}
                 />
-              </Text>
             </TouchableHighlight>
           </View>
         </Modal>
@@ -80,13 +79,11 @@ class SideMenu extends Component {
               this.toggleModal(true);
             }}
           />
-          {/* <Text style={styles.text}></Text> */}
         </TouchableHighlight>
       </View>
     );
   }
 }
-export default SideMenu;
 
 const styles = StyleSheet.create({
   container: {

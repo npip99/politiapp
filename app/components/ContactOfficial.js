@@ -13,19 +13,25 @@ import {
   Button,
   TextInput
 } from "react-native";
-class SideMenu extends Component {
-  state = {
-    modalVisible: false,
-    text: ""
-  };
+
+export default class ContactOfficial extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      modalVisible: false,
+      text: ""
+    };
+  }
+
   toggleModal(visible) {
     this.setState({ modalVisible: visible, submitted: false });
   }
+
   handleAlert = () => {
     Alert.alert("Submitted!!");
   };
 
-  postContact = (official, content) => {
+  postContact = async (official, content) => {
     fetch("http://localhost:3000/contact", {
       method: "POST",
       headers: {
@@ -33,14 +39,15 @@ class SideMenu extends Component {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        a: "abc",
         official: official,
         content: content
       })
     })
       .then(res => res.json())
-      .then(resJSON => {});
+      .then(resJSON => {})
+      .catch(err => console.log(err));
   };
+
   render() {
     return (
       <ScrollView keyboardShouldPersistTaps="handled">
@@ -83,7 +90,7 @@ class SideMenu extends Component {
             />
             <Button
               title="Submit"
-              onPress={() => {
+              onPress={async () => {
                 this.setState({ submitted: true });
                 Keyboard.dismiss();
                 this.postContact(
@@ -104,7 +111,7 @@ class SideMenu extends Component {
                   ]);
                 }, 50);
               }}
-            ></Button>
+            />
           </View>
         </Modal>
 
@@ -124,7 +131,6 @@ class SideMenu extends Component {
     );
   }
 }
-export default SideMenu;
 
 const styles = StyleSheet.create({
   header: {
@@ -157,3 +163,4 @@ const styles = StyleSheet.create({
     marginTop: 45
   }
 });
+

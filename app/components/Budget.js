@@ -2,6 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View, Dimensions } from "react-native";
 import { PieChart } from "react-native-chart-kit";
 import List from "./List";
+import Config from '../Config';
 
 export default class Budget extends React.Component {
   constructor(props) {
@@ -20,15 +21,23 @@ export default class Budget extends React.Component {
   }
 
   async updateOfficialsInformation() {
-    fetch("http://localhost:3000/state/fl/budget")
+    console.log("TEST");
+    console.log(Config);
+    fetch(Config.hostname + "/state/fl/budget")
       .then(res => res.json())
       .then(resJSON => {
         this.setState({ state: { ...this.state.state, budget: resJSON } });
+      })
+      .catch(err => {
+        console.log(err);
       });
-    fetch("http://localhost:3000/county/099/budget")
+    fetch(Config.hostname + "/county/099/budget")
       .then(res => res.json())
       .then(resJSON => {
         this.setState({ local: { ...this.state.local, budget: resJSON } });
+      })
+      .catch(err => {
+        console.log(err);
       });
   }
   render() {
@@ -46,12 +55,9 @@ export default class Budget extends React.Component {
       budgetData = this.state.local.budget;
     } else {
       budgetData = this.state.state.budget;
+      console.log(budgetData);
     }
 
-    let totalBudget = 0;
-    for (amount of budgetData.map(budgetDatum => budgetDatum.budget)) {
-      totalBudget += amount;
-    }
     const pieChartData = budgetData.map(budgetDatum => {
       return {
         name: budgetDatum.name,

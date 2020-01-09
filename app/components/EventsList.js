@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import List from "./List";
+import Config from '../Config';
 
 class EventsList extends React.Component {
   constructor(props) {
@@ -12,12 +13,15 @@ class EventsList extends React.Component {
   }
 
   async updateEvents() {
-    fetch("http://localhost:3000/county/099/events")
+    fetch(Config.hostname + "/county/099/events")
       .then(res => res.json())
       .then(resJSON => {
         this.setState({
           events: resJSON
         });
+      })
+      .catch(err => {
+        console.log(err);
       });
   }
 

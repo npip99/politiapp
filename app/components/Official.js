@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Image } from "react-native";
 import List from "../components/List";
 import ExpandableList from "../components/ExpandableList";
 import ContactOfficial from "./ContactOfficial";
+
 export default function Official(props) {
   const listData = props.info.beliefs.map(belief => {
     return {
