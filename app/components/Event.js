@@ -1,27 +1,33 @@
 import React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, ScrollView, Text } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
 export default function Event(props) {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Text style={styles.title}>{props.info.title}</Text>
+      <Text style={styles.date}>{props.info.date}</Text>
       <Text style={styles.body}>{props.info.body}</Text>
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     height: "100%",
-    width: "100%"
+    width: "100%",
+    backgroundColor: "#fff",
+    padding: 25,
   },
   title: {
     fontSize: 18,
-    margin: 25,
+  },
+  date: {
+    fontSize: 12,
+    color: "#aaa",
   },
   body: {
-    marginHorizontal: 25,
+    marginTop: 15,
   },
 });
 

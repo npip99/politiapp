@@ -37,7 +37,7 @@ const stackNav = createStackNavigator({
   Detail: {
     screen: Detail,
     navigationOptions: ({ navigation }) => ({
-      title: "Detail"
+      title: "Current Event"
     })
   }
 });
