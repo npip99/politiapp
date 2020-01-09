@@ -15,7 +15,10 @@ import Detail from "./Detail";
 const stackNav = createStackNavigator({
   Main: {
     screen: props => (
-      <PoliticalInfo style={{flex: 1}} screenProps={{ pageName: "State", ...props }} />
+      <PoliticalInfo
+        style={{ flex: 1 }}
+        screenProps={{ pageName: "State", ...props }}
+      />
     ),
 
     navigationOptions: ({ navigation }) => ({
@@ -36,10 +39,11 @@ const stackNav = createStackNavigator({
   Detail: {
     screen: Detail,
     navigationOptions: ({ navigation }) => ({
+      headerBackTitle: " ",
+
       title: "Detail"
     })
   }
 });
 
 export default stackNav;
-
