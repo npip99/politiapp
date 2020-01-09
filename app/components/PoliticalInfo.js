@@ -12,7 +12,7 @@ const TabNavigator = createBottomTabNavigator(
       screen: Officials,
       navigationOptions: {
         tabBarIcon: ({ tintColor }) => (
-          <Icon name="ios-people" color={tintColor} size={28} />
+          <Icon name="ios-people" color={tintColor} size={27} />
         )
       }
     },
@@ -20,7 +20,7 @@ const TabNavigator = createBottomTabNavigator(
       screen: Budget,
       navigationOptions: {
         tabBarIcon: ({ tintColor }) => (
-          <Icon name="ios-cash" color={tintColor} size={28} />
+          <Icon name="ios-cash" color={tintColor} size={27} />
         )
       }
     }

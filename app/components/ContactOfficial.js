@@ -92,7 +92,7 @@ class SideMenu extends Component {
                 );
                 setTimeout(() => {
                   //... open your alert here https://github.com/facebook/react-native/issues/17356
-                  Alert.alert("Submit", "Send the message?", [
+                  Alert.alert("Your message has been sent!", "", [
                     {
                       text: "Ok",
                       onPress: () => {

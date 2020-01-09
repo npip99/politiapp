@@ -68,8 +68,7 @@ class ExpandableItemComponent extends Component {
         <View
           style={{
             height: this.state.layoutHeight,
-            overflow: "hidden",
-            backgroundColor: "blue"
+            overflow: "hidden"
           }}
         >
           {/*Content under the header of the Expandable List Item*/}
@@ -196,8 +195,7 @@ const styles = StyleSheet.create({
   content: {
     // paddingBosubcategory: 10,
     paddingLeft: 10,
-    paddingRight: 10,
-    backgroundColor: "blue"
+    paddingRight: 10
   }
 });
 

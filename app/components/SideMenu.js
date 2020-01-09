@@ -35,7 +35,11 @@ class SideMenu extends Component {
         <View style={styles.titleContainer}>
           <Text style={styles.title}>Politiapp</Text>
         </View>
-        <DrawerItems style={styles.drawer} {...this.props} />
+        <DrawerItems
+          style={styles.drawer}
+          iconContainerStyle={{ opacity: 0.85 }}
+          {...this.props}
+        />
 
         <View style={styles.footer}>
           <View style={styles.footerInner}>

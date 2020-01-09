@@ -3,7 +3,9 @@ import { Dimensions, TouchableOpacity, View } from "react-native";
 import { createAppContainer } from "react-navigation";
 import { createDrawerNavigator } from "react-navigation-drawer";
 import SideMenu from "./components/SideMenu";
-import IOSIcon from "react-native-vector-icons/Ionicons";
+import Icon from "react-native-vector-icons/FontAwesome";
+import Icon5 from "react-native-vector-icons/FontAwesome5";
+
 import State from "./screens/State";
 import Local from "./screens/Local";
 import Events from "./screens/Events";
@@ -11,14 +13,23 @@ import Events from "./screens/Events";
 const App = createDrawerNavigator(
   {
     Events: {
-      screen: Events
+      screen: Events,
+      navigationOptions: {
+        drawerIcon: <Icon name="newspaper-o" size={22} />
+      }
     },
     State: {
-      screen: State
+      screen: State,
+      navigationOptions: {
+        drawerIcon: <Icon name="institution" size={22} />
+      }
     },
     Local: {
-      screen: Local
-    },
+      screen: Local,
+      navigationOptions: {
+        drawerIcon: <Icon5 name="city" size={20} />
+      }
+    }
   },
   {
     contentComponent: SideMenu,
@@ -27,4 +38,3 @@ const App = createDrawerNavigator(
 );
 
 export default createAppContainer(App);
-
