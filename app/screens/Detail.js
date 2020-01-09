@@ -4,11 +4,19 @@ import Official from "../components/Official";
 import Event from "../components/Event";
 
 export default function Detail(props) {
-  const params = props.navigation.state.params;
+  const params = props.screenProps.navigation.state.params;
 
   return params.official ? (
-    <Official info={params.info}/>
+    <Official style={styles.container} info={params.info}/>
   ) : (
-    <Event info={params.info}/>
+    <Event style={styles.container} info={params.info}/>
   );
 }
+
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
+
