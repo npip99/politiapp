@@ -35,13 +35,7 @@ class ExpandableListItem extends Component {
       finalValue = this.state.expanded
         ? this.state.minHeight
         : this.state.maxHeight + this.state.minHeight;
-    console.log(
-      "toggle",
-      this.state.expanded,
-      this.state.animation,
-      initialValue,
-      finalValue
-    );
+
     this.setState({
       expanded: !this.state.expanded
     });
@@ -53,14 +47,12 @@ class ExpandableListItem extends Component {
   }
 
   _setMaxHeight(event) {
-    console.log("setMaxHeight");
     this.setState({
       maxHeight: event.nativeEvent.layout.height
     });
   }
 
   _setMinHeight(event) {
-    console.log("setMinHeight", event.nativeEvent.layout.height);
     if (this.state.animation._value == 0) {
       this.state.animation.setValue(event.nativeEvent.layout.height);
     }
@@ -109,7 +101,7 @@ class ExpandableListItem extends Component {
 function elevationShadowStyle(elevation) {
   return {
     elevation,
-    shadowColor: 'black',
+    shadowColor: "black",
     shadowOffset: { width: 0, height: 0.5 * elevation },
     shadowOpacity: 0.3,
     shadowRadius: 0.8 * elevation
@@ -120,12 +112,12 @@ var styles = StyleSheet.create({
   container: {
     backgroundColor: "#fff",
     margin: 10,
-    overflow: "hidden",
+    overflow: "hidden"
   },
   titleContainer: {
     flexDirection: "row",
     backgroundColor: "red",
-    ...elevationShadowStyle(3),
+    ...elevationShadowStyle(3)
   },
   title: {
     flex: 1,
