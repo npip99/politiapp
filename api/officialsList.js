@@ -1,5 +1,48 @@
 var localOfficials = [
   {
+    id: 1000,
+    name: "Bobby Powell",
+    position: "Florida Senator",
+    image: "https://www.myfloridahouse.gov/FileStores/Adhoc/MemberPictures/State%20Senate/s030.jpg",
+    beliefs: [
+      {
+        belief: "I'm a representative"
+      },
+      {
+        belief: "I'm a representative"
+      }
+    ],
+  },
+  {
+    id: 1000,
+    name: "Rick Roth",
+    position: "Florida Senator",
+    image: "https://www.myfloridahouse.gov/FileStores/Web/Imaging/Member/4648.jpg",
+    beliefs: [
+      {
+        belief: "I'm a representative"
+      },
+      {
+        belief: "I'm a representative"
+      }
+    ],
+  },
+  {
+    id: 1000,
+    name: "Rick Roth",
+    position: "U.S. House of Representatives",
+    image:
+      "https://www.myfloridahouse.gov/FileStores/Adhoc/MemberPictures/US%20House/18.jpg",
+    beliefs: [
+      {
+        belief: "I'm a representative"
+      },
+      {
+        belief: "I'm a representative"
+      }
+    ],
+  }
+  {
     id: 0,
     name: "Dave Kerner",
     position: "County Commissioner",
