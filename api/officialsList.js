@@ -29,7 +29,7 @@ var localOfficials = [
   },
   {
     id: 1000,
-    name: "Rick Roth",
+    name: "Brian Mast",
     position: "U.S. House of Representatives",
     image:
       "https://www.myfloridahouse.gov/FileStores/Adhoc/MemberPictures/US%20House/18.jpg",
@@ -189,7 +189,9 @@ var stateOfficials = [
     beliefs: [
       {
         belief:
-          "Believes that governments are inherently inefficient, and that private enterprise is better."
+          "Believes that governments are inherently inefficient, and that private enterprise is better.",
+        pros: "Pros - Governments have no competitive pressure like a private company does. If a private company or citizen can do the same thing for cheaper, he will compete with other private companies and force lower prices.",
+        cons: "Cons - Large Instutions like Social Security are known to have very low administrative costs, on the order of 0.8%. This is commonly lower than the administrative costs of many smaller enterprises, and is lower than the profit margin of any private company.",
       },
       {
         belief: "I'm a senator"
