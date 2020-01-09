@@ -48,7 +48,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     marginVertical: 5,
     marginHorizontal: 10,
-    // backgroundColor: "blue",
+    backgroundColor: "#fff",
+
     ...elevationShadowStyle(3)
   },
   imageContainer: {

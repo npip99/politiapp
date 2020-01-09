@@ -8,8 +8,16 @@ export default function Official(props) {
   const listData = props.info.beliefs.map(belief => {
     return {
       title: belief.belief,
-      description:
-        "HAHA Description HAHA DescriptionHAHA DescriptionHAHA DescriptionHAHA DescriptionHAHA DescriptionHAHA DescriptionHAHA Description"
+      subsections: [
+        {
+          id: 1,
+          val: belief.pros
+        },
+        {
+          id: 2,
+          val: belief.cons
+        },
+      ],
     };
   });
 

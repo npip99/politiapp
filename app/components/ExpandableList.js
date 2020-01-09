@@ -95,22 +95,12 @@ export default class ExpandableList extends Component {
     if (Platform.OS === "android") {
       UIManager.setLayoutAnimationEnabledExperimental(true);
     }
+    console.log(props.beliefs);
     this.state = {
       listDataSource: props.beliefs.map(item => ({
         isExpanded: false,
         category_name: item.title,
-        subcategory: [
-          {
-            id: "Pros",
-            val:
-              "Pros - Governments have no competitive pressure like a private company does. If a private company or citizen can do the same thing for cheaper, he will compete with other private companies and force lower prices."
-          },
-          {
-            id: "Cons",
-            val:
-              "Cons - Large Instutions like Social Security are known to have very low administrative costs, on the order of 0.8%. This is commonly lower than the administrative costs of many smaller enterprises, and is lower than the profit margin of any private company."
-          }
-        ]
+        subcategory: item.subsections,
       }))
     };
   }
