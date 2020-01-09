@@ -1,9 +1,8 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import Icon from "react-native-vector-icons/AntDesign";
-
-// import styles from "./SideMenu.style";
 import {
+  Keyboard,
   ScrollView,
   Alert,
   Text,
@@ -19,14 +18,21 @@ class SideMenu extends Component {
     modalVisible: false,
     text: ""
   };
-  toggleModal(visible) {
-    this.setState({ modalVisible: visible });
+  componentDidMount() {
+    console.log("mounting the component");
   }
-
+  toggleModal(visible) {
+    this.setState({ modalVisible: visible, submitted: false });
+  }
+  handleAlert = () => {
+    Alert.alert("Submitted!!");
+  };
   render() {
-    console.log("OFFICIAL INFO", this.props.officialInfo);
+    if (this.input) {
+      console.log("render focus", this.input.isFocused());
+    }
     return (
-      <View>
+      <ScrollView keyboardShouldPersistTaps="handled">
         <Modal
           animationType={"slide"}
           transparent={false}
@@ -47,27 +53,44 @@ class SideMenu extends Component {
                 }}
               />
             </View>
-            <View style={{ padding: 10, width: "100%" }}>
-              <TextInput
-                multiline={true}
-                style={{
-                  height: "45%",
-                  width: "100%",
-                  borderColor: "gray",
-                  borderWidth: 1
-                }}
-                placeholder="Write a message"
-                onChangeText={text => this.setState({ text })}
-                value={this.state.text}
-              />
-              <Button
-                title="Submit"
-                onPress={() => {
-                  this.setState({ text: "" });
-                  Alert.alert("Submitted!!");
-                }}
-              ></Button>
-            </View>
+            <TextInput
+              autoFocus={this.state.submitted ? false : true}
+              multiline={true}
+              ref={input => (this.input = input)}
+              style={{
+                height: 100,
+                width: "100%",
+                borderColor: "gray",
+                backgroundColor: "blue",
+                borderWidth: 1
+              }}
+              placeholder="Write a message"
+              onChangeText={text => this.setState({ text })}
+              value={this.state.text}
+            />
+            <Button
+              title="Submit"
+              onPress={() => {
+                console.log(
+                  "submit this.refs.input.isfocused",
+                  this.input.isFocused()
+                );
+                this.setState({ text: "", submitted: true });
+                Keyboard.dismiss();
+                setTimeout(() => {
+                  //... open your alert here https://github.com/facebook/react-native/issues/17356
+                  Alert.alert("sub", "My Alert Msg", [
+                    {
+                      text: "Ok",
+                      onPress: () => {
+                        Keyboard.dismiss();
+                        this.toggleModal(!this.state.modalVisible);
+                      }
+                    }
+                  ]);
+                }, 50);
+              }}
+            ></Button>
           </View>
         </Modal>
 
@@ -82,9 +105,8 @@ class SideMenu extends Component {
               this.toggleModal(true);
             }}
           />
-          {/* <Text style={styles.text}></Text> */}
         </TouchableHighlight>
-      </View>
+      </ScrollView>
     );
   }
 }

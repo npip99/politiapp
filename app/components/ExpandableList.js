@@ -55,7 +55,6 @@ class ExpandableItemComponent extends Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <View style={{ zIndex: 3 }}>
         {/*Header of the Expandable List Item*/}
@@ -97,7 +96,6 @@ export default class ExpandableList extends Component {
     if (Platform.OS === "android") {
       UIManager.setLayoutAnimationEnabledExperimental(true);
     }
-    console.log("info expandable list", props);
     this.state = {
       listDataSource: props.beliefs.map(item => ({
         isExpanded: false,
@@ -146,7 +144,7 @@ export default class ExpandableList extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <ScrollView>
+        <ScrollView keyboardShouldPersistTaps="handled">
           {this.state.listDataSource.map((item, key) => (
             <ExpandableItemComponent
               key={key}

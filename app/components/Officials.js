@@ -23,13 +23,11 @@ export default class Officials extends React.Component {
     fetch("http://localhost:3000/state/fl/officials")
       .then(res => res.json())
       .then(resJSON => {
-        console.log(resJSON);
         this.setState({ state: { ...this.state.state, officials: resJSON } });
       });
     fetch("http://localhost:3000/county/099/officials")
       .then(res => res.json())
       .then(resJSON => {
-        console.log(resJSON);
         this.setState({ local: { ...this.state.local, officials: resJSON } });
       });
   }
