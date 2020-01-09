@@ -128,8 +128,6 @@ export default SideMenu;
 
 const styles = StyleSheet.create({
   header: {
-    // flex: 1,
-    // flexDirection: "row",
     marginTop: 60,
     height: 90,
     padding: 25,
@@ -143,29 +141,11 @@ const styles = StyleSheet.create({
     left: "100%",
     marginTop: -25,
     marginLeft: -15
-    // left:
-    // left: "100%",
-    // marginLeft: -55
-    // marginTop: 60
-    // marginLeft: 20
-    // marginL
-    // left: "50%",
-    // top: "-15%",
-    // marginLeft: -75
   },
   modal: {
     flex: 1
-    // paddingTop: 100,
-    // alignItems: "center",
-    // justifyContent: "center"
   },
-  text: {
-    // color: "#3f2949",
-    // marginLeft: 20,
-    // marginTop: 60
-    // marginTop: 10,
-    // justifyContent: "center"
-  },
+  text: {},
   titleContainer: {
     height: 100,
     alignItems: "center",

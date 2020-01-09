@@ -4,11 +4,26 @@ import { createAppContainer } from "react-navigation";
 import { createBottomTabNavigator } from "react-navigation-tabs";
 import Officials from "./Officials";
 import Budget from "./Budget";
+import Icon from "react-native-vector-icons/Ionicons";
 
 const TabNavigator = createBottomTabNavigator(
   {
-    Officials: Officials,
-    Budget: Budget
+    Officials: {
+      screen: Officials,
+      navigationOptions: {
+        tabBarIcon: ({ tintColor }) => (
+          <Icon name="ios-people" color={tintColor} size={28} />
+        )
+      }
+    },
+    Budget: {
+      screen: Budget,
+      navigationOptions: {
+        tabBarIcon: ({ tintColor }) => (
+          <Icon name="ios-cash" color={tintColor} size={28} />
+        )
+      }
+    }
   },
   {
     tabBarOptions: {
