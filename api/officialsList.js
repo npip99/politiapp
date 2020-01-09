@@ -1,6 +1,6 @@
 var localOfficials = [
   {
-    id: 1000,
+    id: 1,
     name: "Bobby Powell",
     position: "Florida Senator",
     image: "https://www.myfloridahouse.gov/FileStores/Adhoc/MemberPictures/State%20Senate/s030.jpg",
@@ -14,7 +14,7 @@ var localOfficials = [
     ],
   },
   {
-    id: 1000,
+    id: 2,
     name: "Rick Roth",
     position: "Florida Senator",
     image: "https://www.myfloridahouse.gov/FileStores/Web/Imaging/Member/4648.jpg",
@@ -28,7 +28,7 @@ var localOfficials = [
     ],
   },
   {
-    id: 1000,
+    id: 3,
     name: "Brian Mast",
     position: "U.S. House of Representatives",
     image:
@@ -41,9 +41,9 @@ var localOfficials = [
         belief: "I'm a representative"
       }
     ],
-  }
+  },
   {
-    id: 0,
+    id: 4,
     name: "Dave Kerner",
     position: "County Commissioner",
     image:
@@ -58,7 +58,7 @@ var localOfficials = [
     ]
   },
   {
-    id: 1,
+    id: 5,
     name: "Robert S. Weinroth",
     position: "County Commissioner",
     image:
@@ -73,7 +73,7 @@ var localOfficials = [
     ]
   },
   {
-    id: 2,
+    id: 6,
     name: "Hal R. Valeche",
     position: "County Commissioner",
     image:
@@ -88,7 +88,7 @@ var localOfficials = [
     ]
   },
   {
-    id: 3,
+    id: 7,
     name: "Gregg K. Weiss",
     position: "County Commissioner",
     image:
@@ -103,7 +103,7 @@ var localOfficials = [
     ]
   },
   {
-    id: 4,
+    id: 8,
     name: "Mary Lou Berger",
     position: "County Commissioner",
     image:
@@ -118,7 +118,7 @@ var localOfficials = [
     ]
   },
   {
-    id: 5,
+    id: 9,
     name: "Melissa McKinlay",
     position: "County Commissioner",
     image:
@@ -133,7 +133,7 @@ var localOfficials = [
     ]
   },
   {
-    id: 6,
+    id: 10,
     name: "Mack Bernard",
     position: "County Commissioner",
     image:
@@ -148,7 +148,7 @@ var localOfficials = [
     ]
   },
   {
-    id: 7,
+    id: 11,
     name: "Verdenia C. Baker",
     position: "County Administrator",
     image:
@@ -194,7 +194,9 @@ var stateOfficials = [
         cons: "Cons - Large Instutions like Social Security are known to have very low administrative costs, on the order of 0.8%. This is commonly lower than the administrative costs of many smaller enterprises, and is lower than the profit margin of any private company.",
       },
       {
-        belief: "I'm a senator"
+        belief: "Supports capital punishment for crimes such as murder.",
+        pros: "Pros - Hardliner stance could deter future crimes, and it is seen as honoring the victim's desires. Proponents argue that a more extensive and more public death penalty will enforce the law via fear.",
+        cons: "Cons - Dissidents say that it is immoral and inhumane, and argue that tragedy occurs when capital punishment is executed upon an innocent. Dissidents argue that losing a court case is commonly associated both race and the ability to afford a lawyer, and the death penalty should not be tied to these attributes."
       }
     ]
   },
@@ -215,7 +217,7 @@ var stateOfficials = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     name: "Ashley Moody",
     position: "Attorney General",
     image:
@@ -231,7 +233,7 @@ var stateOfficials = [
     ]
   },
   {
-    id: 2,
+    id: 4,
     name: "Jimmy Patronis",
     position: "Chief Financial Officer",
     image:
@@ -247,7 +249,7 @@ var stateOfficials = [
     ]
   },
   {
-    id: 2,
+    id: 5,
     name: "Nikki Fried",
     position: "Commissioner of Agriculture ",
     image:
