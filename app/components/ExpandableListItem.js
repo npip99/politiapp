@@ -24,9 +24,6 @@ class ExpandableListItem extends Component {
     };
     this.state.animation.addListener(({ value }) => (this._value = value));
   }
-  componentDidMount() {
-    console.log("Component did mount", this.state);
-  }
 
   toggle() {
     let initialValue = this.state.expanded
@@ -62,16 +59,6 @@ class ExpandableListItem extends Component {
   }
 
   render() {
-    // let icon = this.icons['down'];
-
-    // if(this.state.expanded){
-    //     icon = this.icons['up'];
-    // }
-    console.log(
-      "animation value",
-      this.state.animation._value,
-      this.state.animation._value == 40
-    );
     return (
       <Animated.View
         style={[styles.container, { height: this.state.animation }]}

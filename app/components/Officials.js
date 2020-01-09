@@ -39,6 +39,7 @@ export default class Officials extends React.Component {
     } else {
       officials = this.state.state.officials;
     }
+    console.log("officials", officials);
     return (
       <View style={styles.container}>
         <List

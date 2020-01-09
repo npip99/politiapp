@@ -18,9 +18,6 @@ class SideMenu extends Component {
     modalVisible: false,
     text: ""
   };
-  componentDidMount() {
-    console.log("mounting the component");
-  }
   toggleModal(visible) {
     this.setState({ modalVisible: visible, submitted: false });
   }
@@ -29,7 +26,6 @@ class SideMenu extends Component {
   };
 
   postContact = (official, content) => {
-    console.log("postContact", official, content);
     fetch("http://localhost:3000/contact", {
       method: "POST",
       headers: {
@@ -43,9 +39,7 @@ class SideMenu extends Component {
       })
     })
       .then(res => res.json())
-      .then(resJSON => {
-        console.log("resJSON", resJSON);
-      });
+      .then(resJSON => {});
   };
   render() {
     return (
@@ -88,10 +82,6 @@ class SideMenu extends Component {
             <Button
               title="Submit"
               onPress={() => {
-                console.log(
-                  "submit this.refs.input.isfocused",
-                  this.input.isFocused()
-                );
                 this.setState({ text: "", submitted: true });
                 Keyboard.dismiss();
                 this.postContact(
