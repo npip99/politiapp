@@ -49,7 +49,7 @@ var localOfficials = [
     name: "Dave Kerner",
     position: "County Commissioner",
     image:
-      "http://discover.pbcgov.org/countycommissioners/SiteImages/portraits/Dave_Kerner_d3.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/0/07/Dave_Kerner.jpg",
     beliefs: [
       {
         belief:
@@ -66,7 +66,7 @@ var localOfficials = [
     name: "Robert S. Weinroth",
     position: "County Commissioner",
     image:
-      "http://discover.pbcgov.org/countycommissioners/SiteImages/portraits/d4-rweinroth.jpg",
+      "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/52402651_2117302298361950_5805841300724908032_n.jpg?_nc_cat=109&_nc_ohc=GizSJXfN_RoAX-B18oE&_nc_ht=scontent-lga3-1.xx&oh=8b0d9e6cab65ea98f3e49c67fba1a53c&oe=5EDBF265",
     beliefs: [
       {
         belief: "Broad background in business management"
@@ -81,7 +81,7 @@ var localOfficials = [
     name: "Hal R. Valeche",
     position: "County Commissioner",
     image:
-      "http://discover.pbcgov.org/countycommissioners/SiteImages/portraits/d1.jpg",
+      "https://apps.mypalmbeachpost.com/kycg2016/img/candidates/hal-valeche.jpg",
     beliefs: [
       {
         belief: "I'm a county commissioner"
@@ -96,7 +96,7 @@ var localOfficials = [
     name: "Gregg K. Weiss",
     position: "County Commissioner",
     image:
-      "http://discover.pbcgov.org/countycommissioners/SiteImages/portraits/d2-Weiss.jpg",
+      "https://pbs.twimg.com/profile_images/1070389239584579584/fFRDE6Bb_400x400.jpg",
     beliefs: [
       {
         belief: "I'm a county commissioner"
@@ -111,7 +111,7 @@ var localOfficials = [
     name: "Mary Lou Berger",
     position: "County Commissioner",
     image:
-      "http://discover.pbcgov.org/countycommissioners/SiteImages/portraits/d5.jpg",
+      "https://cmgpalmbeachposteyeonpbc.files.wordpress.com/2016/05/mary-lou-berger.jpg?w=480&h=600",
     beliefs: [
       {
         belief: "I'm a county commissioner"
@@ -126,7 +126,7 @@ var localOfficials = [
     name: "Melissa McKinlay",
     position: "County Commissioner",
     image:
-      "http://discover.pbcgov.org/countycommissioners/SiteImages/portraits/d6.jpg",
+      "https://www.sun-sentinel.com/resizer/FtDNmEzR49r0FVhNScjthldv4Sw=/800x501/top/www.trbimg.com/img-591f6456/turbine/fl-sf100-melissa-mckinlay-pic",
     beliefs: [
       {
         belief: "I'm a county commissioner"
@@ -141,7 +141,7 @@ var localOfficials = [
     name: "Mack Bernard",
     position: "County Commissioner",
     image:
-      "http://discover.pbcgov.org/countycommissioners/SiteImages/portraits/M-Bernard-d7.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/4/49/Mack_Bernard.jpeg",
     beliefs: [
       {
         belief: "I'm a county commissioner"
@@ -156,7 +156,7 @@ var localOfficials = [
     name: "Verdenia C. Baker",
     position: "County Administrator",
     image:
-      "http://discover.pbcgov.org/administration/SiteImages/verdenia_baker_100.jpg",
+      "https://i0.wp.com/empowherofthepalmbeaches.org/wp-content/uploads/2016/01/Verdenia.png?zoom=2&resize=250%2C250&ssl=1",
     beliefs: [
       {
         belief: "I'm a county commissioner"
