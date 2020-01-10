@@ -5,10 +5,11 @@ const port = 3000;
 
 const { localOfficials, stateOfficials } = require("./officialsList.js");
 const { localBudget, stateBudget } = require("./budgetList.js");
-const list = [];
+const events = require("./eventsList.js");
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-const events = require("./eventsList.js");
+const list = [];
 
 app.get("/state/fl/officials", (req, res) => {
   res.send(JSON.stringify(stateOfficials));
@@ -26,15 +27,14 @@ app.get("/county/099/budget", (req, res) => {
   res.send(JSON.stringify(localBudget));
 });
 
-app.post("/contact", (req, res) => {
-  list.push(req.body);
-  res.send(JSON.stringify(req.body));
-});
-app.get("/contact", (req, res) => {
-  res.send(JSON.stringify(list));
-});
 app.get("/county/099/events", (req, res) => {
   res.send(JSON.stringify(events));
+});
+
+app.post("/contact", (req, res) => {
+  list.push(req.body);
+  console.log("Contacted: ", req.body);
+  res.send(JSON.stringify(req.body));
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
