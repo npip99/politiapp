@@ -57,9 +57,7 @@ export default class ContactOfficial extends Component {
           animationType={"slide"}
           transparent={false}
           visible={this.state.modalVisible}
-          onRequestClose={() => {
-            console.log("Modal has been closed.");
-          }}
+          onRequestClose={() => {}}
         >
           <View style={styles.modal}>
             <View style={styles.header}>

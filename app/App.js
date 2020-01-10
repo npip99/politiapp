@@ -15,7 +15,7 @@ const App = createDrawerNavigator(
     Events: {
       screen: Events,
       navigationOptions: {
-        drawerIcon: <Icon name="newspaper-o" size={22} />
+        drawerIcon: <Icon name="newspaper-o" size={21} />
       }
     },
     State: {

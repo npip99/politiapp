@@ -21,8 +21,6 @@ export default class Budget extends React.Component {
   }
 
   async updateOfficialsInformation() {
-    console.log("TEST");
-    console.log(Config);
     fetch(Config.hostname + "/state/fl/budget")
       .then(res => res.json())
       .then(resJSON => {
@@ -55,7 +53,6 @@ export default class Budget extends React.Component {
       budgetData = this.state.local.budget;
     } else {
       budgetData = this.state.state.budget;
-      console.log(budgetData);
     }
 
     const pieChartData = budgetData.map(budgetDatum => {
@@ -91,10 +88,7 @@ export default class Budget extends React.Component {
             absolute
           />
         </View>
-        <View style={{ width: "100%", height: 2 }}>
-          <Text style={styles.line}></Text>
-        </View>
-
+        <Text style={styles.line}></Text>
         <View style={styles.listContainer}>
           <List data={listData} unclickable />
         </View>
@@ -111,6 +105,13 @@ const styles = StyleSheet.create({
     alignItems: "center"
   },
   pieChartContainer: {},
+  line: {
+    width: "90%",
+    marginTop: 15,
+    height: 2,
+    marginHorizontal: 5,
+    backgroundColor: "#8a8a8a"
+  },
   listContainer: {
     flex: 1,
     width: "100%"

@@ -95,7 +95,6 @@ export default class ExpandableList extends Component {
     if (Platform.OS === "android") {
       UIManager.setLayoutAnimationEnabledExperimental(true);
     }
-    console.log(props.beliefs);
     this.state = {
       listDataSource: props.beliefs.map(item => ({
         isExpanded: false,

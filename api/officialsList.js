@@ -1,9 +1,10 @@
 var localOfficials = [
   {
-    id: 1000,
+    id: 1,
     name: "Bobby Powell",
     position: "Florida Senator",
-    image: "https://www.myfloridahouse.gov/FileStores/Adhoc/MemberPictures/State%20Senate/s030.jpg",
+    image:
+      "https://www.myfloridahouse.gov/FileStores/Adhoc/MemberPictures/State%20Senate/s030.jpg",
     beliefs: [
       {
         belief: "I'm a representative"
@@ -11,13 +12,14 @@ var localOfficials = [
       {
         belief: "I'm a representative"
       }
-    ],
+    ]
   },
   {
-    id: 1000,
+    id: 2,
     name: "Rick Roth",
     position: "Florida Senator",
-    image: "https://www.myfloridahouse.gov/FileStores/Web/Imaging/Member/4648.jpg",
+    image:
+      "https://www.myfloridahouse.gov/FileStores/Web/Imaging/Member/4648.jpg",
     beliefs: [
       {
         belief: "I'm a representative"
@@ -25,10 +27,10 @@ var localOfficials = [
       {
         belief: "I'm a representative"
       }
-    ],
+    ]
   },
   {
-    id: 1000,
+    id: 3,
     name: "Brian Mast",
     position: "U.S. House of Representatives",
     image:
@@ -40,26 +42,27 @@ var localOfficials = [
       {
         belief: "I'm a representative"
       }
-    ],
-  }
-
+    ]
+  },
   {
-    id: 0,
+    id: 4,
     name: "Dave Kerner",
     position: "County Commissioner",
     image:
       "http://discover.pbcgov.org/countycommissioners/SiteImages/portraits/Dave_Kerner_d3.jpg",
     beliefs: [
       {
-        belief: "Opposes many National Rifle Association sponsored legislations despite having a background as a police officer "
+        belief:
+          "Opposes many National Rifle Association sponsored legislations despite having a background as a police officer "
       },
       {
-        belief: "Opposes human trafficking -- Authored legislation with State Senator Joseph Abruzzo that would 'sever the parental rights of a rapist if a child is conceived as a result of the attack.' (in some cases, rapists could sue for custody of children that were the products of the rapes that they committed)"
+        belief:
+          "Opposes human trafficking -- Authored legislation with State Senator Joseph Abruzzo that would 'sever the parental rights of a rapist if a child is conceived as a result of the attack.' (in some cases, rapists could sue for custody of children that were the products of the rapes that they committed)"
       }
     ]
   },
   {
-    id: 1,
+    id: 5,
     name: "Robert S. Weinroth",
     position: "County Commissioner",
     image:
@@ -74,7 +77,7 @@ var localOfficials = [
     ]
   },
   {
-    id: 2,
+    id: 6,
     name: "Hal R. Valeche",
     position: "County Commissioner",
     image:
@@ -89,7 +92,7 @@ var localOfficials = [
     ]
   },
   {
-    id: 3,
+    id: 7,
     name: "Gregg K. Weiss",
     position: "County Commissioner",
     image:
@@ -104,7 +107,7 @@ var localOfficials = [
     ]
   },
   {
-    id: 4,
+    id: 8,
     name: "Mary Lou Berger",
     position: "County Commissioner",
     image:
@@ -119,7 +122,7 @@ var localOfficials = [
     ]
   },
   {
-    id: 5,
+    id: 9,
     name: "Melissa McKinlay",
     position: "County Commissioner",
     image:
@@ -134,7 +137,7 @@ var localOfficials = [
     ]
   },
   {
-    id: 6,
+    id: 10,
     name: "Mack Bernard",
     position: "County Commissioner",
     image:
@@ -149,7 +152,7 @@ var localOfficials = [
     ]
   },
   {
-    id: 7,
+    id: 11,
     name: "Verdenia C. Baker",
     position: "County Administrator",
     image:
@@ -191,11 +194,17 @@ var stateOfficials = [
       {
         belief:
           "Believes that governments are inherently inefficient, and that private enterprise is better.",
-        pros: "Pros - Governments have no competitive pressure like a private company does. If a private company or citizen can do the same thing for cheaper, he will compete with other private companies and force lower prices.",
-        cons: "Cons - Large Instutions like Social Security are known to have very low administrative costs, on the order of 0.8%. This is commonly lower than the administrative costs of many smaller enterprises, and is lower than the profit margin of any private company.",
+        pros:
+          "Pros - Governments have no competitive pressure like a private company does. If a private company or citizen can do the same thing for cheaper, he will compete with other private companies and force lower prices.",
+        cons:
+          "Cons - Large Instutions like Social Security are known to have very low administrative costs, on the order of 0.8%. This is commonly lower than the administrative costs of many smaller enterprises, and is lower than the profit margin of any private company."
       },
       {
-        belief: "I'm a senator"
+        belief: "Supports capital punishment for crimes such as murder.",
+        pros:
+          "Pros - Hardliner stance could deter future crimes, and it is seen as honoring the victim's desires. Proponents argue that a more extensive and more public death penalty will enforce the law via fear.",
+        cons:
+          "Cons - Dissidents say that it is immoral and inhumane, and argue that tragedy occurs when capital punishment is executed upon an innocent. Dissidents argue that losing a court case is commonly associated both race and the ability to afford a lawyer, and the death penalty should not be tied to these attributes."
       }
     ]
   },
@@ -216,7 +225,7 @@ var stateOfficials = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     name: "Ashley Moody",
     position: "Attorney General",
     image:
@@ -232,7 +241,7 @@ var stateOfficials = [
     ]
   },
   {
-    id: 2,
+    id: 4,
     name: "Jimmy Patronis",
     position: "Chief Financial Officer",
     image:
@@ -248,7 +257,7 @@ var stateOfficials = [
     ]
   },
   {
-    id: 2,
+    id: 5,
     name: "Nikki Fried",
     position: "Commissioner of Agriculture ",
     image:
