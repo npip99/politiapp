@@ -9,8 +9,9 @@ import {
   StyleSheet,
   Modal,
   TouchableHighlight,
-  Button
 } from "react-native";
+
+import Button from "./Button";
 
 export default class About extends Component {
   //   navigateToScreen = route => () => {
@@ -67,6 +68,7 @@ export default class About extends Component {
             onPress={() => {
               this.toggleModal(true);
             }}
+            buttonStyle={{fontSize: 14}}
           />
         </TouchableHighlight>
       </View>

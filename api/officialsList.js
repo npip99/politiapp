@@ -1,6 +1,6 @@
 var localOfficials = [
   {
-    id: 4,
+    id: 0,
     name: "Dave Kerner",
     position: "County Commissioner",
     image:
@@ -17,7 +17,7 @@ var localOfficials = [
     ]
   },
   {
-    id: 5,
+    id: 1,
     name: "Robert S. Weinroth",
     position: "County Commissioner",
     image:
@@ -32,7 +32,7 @@ var localOfficials = [
     ]
   },
   {
-    id: 6,
+    id: 2,
     name: "Hal R. Valeche",
     position: "County Commissioner",
     image:
@@ -57,7 +57,7 @@ var localOfficials = [
     ]
   },
   {
-    id: 7,
+    id: 3,
     name: "Gregg K. Weiss",
     position: "County Commissioner",
     image:
@@ -74,7 +74,7 @@ var localOfficials = [
     ]
   },
   {
-    id: 8,
+    id: 4,
     name: "Mary Lou Berger",
     position: "County Commissioner",
     image:
@@ -91,7 +91,7 @@ var localOfficials = [
     ]
   },
   {
-    id: 9,
+    id: 5,
     name: "Melissa McKinlay",
     position: "County Commissioner",
     image:
@@ -108,7 +108,7 @@ var localOfficials = [
     ]
   },
   {
-    id: 10,
+    id: 6,
     name: "Mack Bernard",
     position: "County Commissioner",
     image:
@@ -125,7 +125,7 @@ var localOfficials = [
     ]
   },
   {
-    id: 11,
+    id: 7,
     name: "Verdenia C. Baker",
     position: "County Administrator",
     image:
@@ -144,7 +144,7 @@ var localOfficials = [
 
 var stateOfficials = [
   {
-    id: 1,
+    id: 0,
     name: "Bobby Powell",
     position: "Florida Senator",
     image:
@@ -157,7 +157,7 @@ var stateOfficials = [
     ]
   },
   {
-    id: 2,
+    id: 1,
     name: "Rick Roth",
     position: "Florida Senator",
     image:
@@ -178,7 +178,7 @@ var stateOfficials = [
     ]
   },
   {
-    id: 3,
+    id: 2,
     name: "Brian Mast",
     position: "U.S. House of Representatives",
     image:
@@ -204,7 +204,7 @@ var stateOfficials = [
   },
 
   {
-    id: 0,
+    id: 3,
     name: "Marco Rubio",
     position: "U.S. Senator",
     image:
@@ -216,7 +216,7 @@ var stateOfficials = [
     ]
   },
   {
-    id: 1,
+    id: 4,
     name: "Rick Scott",
     position: "U.S. Senator",
     image:
@@ -240,7 +240,7 @@ var stateOfficials = [
     ]
   },
   {
-    id: 2,
+    id: 5,
     name: "Ron DeSantis",
     position: "Governor",
     image:
@@ -284,7 +284,7 @@ var stateOfficials = [
     ]
   },
   {
-    id: 3,
+    id: 6,
     name: "Ashley Moody",
     position: "Attorney General",
     image:
@@ -304,7 +304,7 @@ var stateOfficials = [
     ]
   },
   {
-    id: 4,
+    id: 7,
     name: "Jimmy Patronis",
     position: "Chief Financial Officer",
     image:
@@ -321,7 +321,7 @@ var stateOfficials = [
     ]
   },
   {
-    id: 5,
+    id: 8,
     name: "Nikki Fried",
     position: "Commissioner of Agriculture ",
     image:
