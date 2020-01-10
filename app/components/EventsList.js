@@ -49,6 +49,9 @@ class EventsList extends React.Component {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    margin: 5,
+  },
   header: {
     paddingTop: 40,
     backgroundColor: "whitesmoke"
