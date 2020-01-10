@@ -225,17 +225,17 @@ var stateOfficials = [
       {
         belief:
           "Believes that governments are inherently inefficient, and that private enterprise is better.",
-        pros:
+	comments: [
           "Pros - Governments have no competitive pressure like a private company does. If a private company or citizen can do the same thing for cheaper, he will compete with other private companies and force lower prices.",
-        cons:
           "Cons - Large Instutions like Social Security are known to have very low administrative costs, on the order of 0.8%. This is commonly lower than the administrative costs of many smaller enterprises, and is lower than the profit margin of any private company."
+	]
       },
       {
         belief: "Supports capital punishment for crimes such as murder.",
-        pros:
+	comments: [
           "Pros - Hardliner stance could deter future crimes, and it is seen as honoring the victim's desires. Proponents argue that a more extensive and more public death penalty will enforce the law via fear.",
-        cons:
           "Cons - Dissidents say that it is immoral and inhumane, and argue that tragedy occurs when capital punishment is executed upon an innocent. Dissidents argue that losing a court case is commonly associated both race and the ability to afford a lawyer, and the death penalty should not be tied to these attributes."
+	]
       }
     ]
   },
