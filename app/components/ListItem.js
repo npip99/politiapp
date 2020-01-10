@@ -32,11 +32,15 @@ function elevationShadowStyle(elevation) {
 }
 
 export default function ListItem(props) {
+  const titleStyle = styles.title;
+  if (props.title.split(" ").length > 5) {
+    titleStyle.fontSize = 18;
+  }
   return (
     <View style={styles.container}>
       <ListItemImage image={props.info.image} color={props.info.color} />
       <View style={styles.infoContainer}>
-        <Text style={styles.title}>{props.info.title}</Text>
+        <Text style={titleStyle}>{props.info.title}</Text>
         <Text style={styles.description}>{props.info.description}</Text>
       </View>
     </View>
