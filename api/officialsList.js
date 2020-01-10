@@ -3,7 +3,8 @@ var localOfficials = [
     id: 1,
     name: "Bobby Powell",
     position: "Florida Senator",
-    image: "https://www.myfloridahouse.gov/FileStores/Adhoc/MemberPictures/State%20Senate/s030.jpg",
+    image:
+      "https://www.myfloridahouse.gov/FileStores/Adhoc/MemberPictures/State%20Senate/s030.jpg",
     beliefs: [
       {
         belief: "I'm a representative"
@@ -11,13 +12,14 @@ var localOfficials = [
       {
         belief: "I'm a representative"
       }
-    ],
+    ]
   },
   {
     id: 2,
     name: "Rick Roth",
     position: "Florida Senator",
-    image: "https://www.myfloridahouse.gov/FileStores/Web/Imaging/Member/4648.jpg",
+    image:
+      "https://www.myfloridahouse.gov/FileStores/Web/Imaging/Member/4648.jpg",
     beliefs: [
       {
         belief: "I'm a representative"
@@ -25,7 +27,7 @@ var localOfficials = [
       {
         belief: "I'm a representative"
       }
-    ],
+    ]
   },
   {
     id: 3,
@@ -40,20 +42,22 @@ var localOfficials = [
       {
         belief: "I'm a representative"
       }
-    ],
+    ]
   },
   {
     id: 4,
     name: "Dave Kerner",
     position: "County Commissioner",
     image:
-      "http://discover.pbcgov.org/countycommissioners/SiteImages/portraits/Dave_Kerner_d3.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/0/07/Dave_Kerner.jpg",
     beliefs: [
       {
-        belief: "I'm a county commissioner"
+        belief:
+          "Opposes many National Rifle Association sponsored legislations despite having a background as a police officer "
       },
       {
-        belief: "I'm a county commissioner"
+        belief:
+          "Opposes human trafficking -- Authored legislation with State Senator Joseph Abruzzo that would 'sever the parental rights of a rapist if a child is conceived as a result of the attack.' (in some cases, rapists could sue for custody of children that were the products of the rapes that they committed)"
       }
     ]
   },
@@ -62,13 +66,13 @@ var localOfficials = [
     name: "Robert S. Weinroth",
     position: "County Commissioner",
     image:
-      "http://discover.pbcgov.org/countycommissioners/SiteImages/portraits/d4-rweinroth.jpg",
+      "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/52402651_2117302298361950_5805841300724908032_n.jpg?_nc_cat=109&_nc_ohc=GizSJXfN_RoAX-B18oE&_nc_ht=scontent-lga3-1.xx&oh=8b0d9e6cab65ea98f3e49c67fba1a53c&oe=5EDBF265",
     beliefs: [
       {
-        belief: "I'm a county commissioner"
+        belief: "Broad background in business management"
       },
       {
-        belief: "I'm a county commissioner"
+        belief: "President of two homeowners association"
       }
     ]
   },
@@ -77,7 +81,7 @@ var localOfficials = [
     name: "Hal R. Valeche",
     position: "County Commissioner",
     image:
-      "http://discover.pbcgov.org/countycommissioners/SiteImages/portraits/d1.jpg",
+      "https://apps.mypalmbeachpost.com/kycg2016/img/candidates/hal-valeche.jpg",
     beliefs: [
       {
         belief: "I'm a county commissioner"
@@ -92,7 +96,7 @@ var localOfficials = [
     name: "Gregg K. Weiss",
     position: "County Commissioner",
     image:
-      "http://discover.pbcgov.org/countycommissioners/SiteImages/portraits/d2-Weiss.jpg",
+      "https://pbs.twimg.com/profile_images/1070389239584579584/fFRDE6Bb_400x400.jpg",
     beliefs: [
       {
         belief: "I'm a county commissioner"
@@ -107,7 +111,7 @@ var localOfficials = [
     name: "Mary Lou Berger",
     position: "County Commissioner",
     image:
-      "http://discover.pbcgov.org/countycommissioners/SiteImages/portraits/d5.jpg",
+      "https://cmgpalmbeachposteyeonpbc.files.wordpress.com/2016/05/mary-lou-berger.jpg?w=480&h=600",
     beliefs: [
       {
         belief: "I'm a county commissioner"
@@ -122,7 +126,7 @@ var localOfficials = [
     name: "Melissa McKinlay",
     position: "County Commissioner",
     image:
-      "http://discover.pbcgov.org/countycommissioners/SiteImages/portraits/d6.jpg",
+      "https://www.sun-sentinel.com/resizer/FtDNmEzR49r0FVhNScjthldv4Sw=/800x501/top/www.trbimg.com/img-591f6456/turbine/fl-sf100-melissa-mckinlay-pic",
     beliefs: [
       {
         belief: "I'm a county commissioner"
@@ -137,7 +141,7 @@ var localOfficials = [
     name: "Mack Bernard",
     position: "County Commissioner",
     image:
-      "http://discover.pbcgov.org/countycommissioners/SiteImages/portraits/M-Bernard-d7.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/4/49/Mack_Bernard.jpeg",
     beliefs: [
       {
         belief: "I'm a county commissioner"
@@ -152,7 +156,7 @@ var localOfficials = [
     name: "Verdenia C. Baker",
     position: "County Administrator",
     image:
-      "http://discover.pbcgov.org/administration/SiteImages/verdenia_baker_100.jpg",
+      "https://i0.wp.com/empowherofthepalmbeaches.org/wp-content/uploads/2016/01/Verdenia.png?zoom=2&resize=250%2C250&ssl=1",
     beliefs: [
       {
         belief: "I'm a county commissioner"
@@ -190,13 +194,17 @@ var stateOfficials = [
       {
         belief:
           "Believes that governments are inherently inefficient, and that private enterprise is better.",
-        pros: "Pros - Governments have no competitive pressure like a private company does. If a private company or citizen can do the same thing for cheaper, he will compete with other private companies and force lower prices.",
-        cons: "Cons - Large Instutions like Social Security are known to have very low administrative costs, on the order of 0.8%. This is commonly lower than the administrative costs of many smaller enterprises, and is lower than the profit margin of any private company.",
+        pros:
+          "Pros - Governments have no competitive pressure like a private company does. If a private company or citizen can do the same thing for cheaper, he will compete with other private companies and force lower prices.",
+        cons:
+          "Cons - Large Instutions like Social Security are known to have very low administrative costs, on the order of 0.8%. This is commonly lower than the administrative costs of many smaller enterprises, and is lower than the profit margin of any private company."
       },
       {
         belief: "Supports capital punishment for crimes such as murder.",
-        pros: "Pros - Hardliner stance could deter future crimes, and it is seen as honoring the victim's desires. Proponents argue that a more extensive and more public death penalty will enforce the law via fear.",
-        cons: "Cons - Dissidents say that it is immoral and inhumane, and argue that tragedy occurs when capital punishment is executed upon an innocent. Dissidents argue that losing a court case is commonly associated both race and the ability to afford a lawyer, and the death penalty should not be tied to these attributes."
+        pros:
+          "Pros - Hardliner stance could deter future crimes, and it is seen as honoring the victim's desires. Proponents argue that a more extensive and more public death penalty will enforce the law via fear.",
+        cons:
+          "Cons - Dissidents say that it is immoral and inhumane, and argue that tragedy occurs when capital punishment is executed upon an innocent. Dissidents argue that losing a court case is commonly associated both race and the ability to afford a lawyer, and the death penalty should not be tied to these attributes."
       }
     ]
   },

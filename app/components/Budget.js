@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View, Dimensions } from "react-native";
 import { PieChart } from "react-native-chart-kit";
 import List from "./List";
-import Config from '../Config';
+import Config from "../Config";
 
 export default class Budget extends React.Component {
   constructor(props) {
@@ -100,9 +100,9 @@ export default class Budget extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    width: "100%",
     flexDirection: "column",
-    alignItems: "center",
-    backgroundColor: "#fff"
+    alignItems: "center"
   },
   pieChartContainer: {},
   line: {
@@ -115,5 +115,11 @@ const styles = StyleSheet.create({
   listContainer: {
     flex: 1,
     width: "100%"
+  },
+  line: {
+    marginTop: 15,
+    height: 2,
+    marginHorizontal: 15,
+    backgroundColor: "#8a8a8a"
   }
 });

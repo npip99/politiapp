@@ -38,12 +38,11 @@ const stackNav = createStackNavigator({
   },
   Detail: {
     screen: props => (
-      <Detail style={{flex: 1}} screenProps={{pageName: "Detail", ...props}}/>
+      <Detail style={{flex: 1}} screenProps={{pageName: "", ...props}}/>
     ),
     navigationOptions: ({ navigation }) => ({
       headerBackTitle: " ",
-
-      title: "Detail"
+      title: ""
     })
   }
 });

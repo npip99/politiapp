@@ -34,7 +34,7 @@ const stackNav = createStackNavigator({
   },
   Detail: {
     screen: props => (
-      <Detail style={{flex: 1}} screenProps={{pageName: "Detail", ...props}}/>
+      <Detail style={{flex: 1}} screenProps={{pageName: "", ...props}}/>
     ),
     header: ({ goBack }) => ({
       left: (
@@ -47,8 +47,8 @@ const stackNav = createStackNavigator({
       )
     }),
     navigationOptions: ({ navigation }) => ({
+      headerBackTitle: "",
       title: "",
-      headerBackTitle: " "
     })
   }
 });
