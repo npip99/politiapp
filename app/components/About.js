@@ -9,8 +9,9 @@ import {
   StyleSheet,
   Modal,
   TouchableHighlight,
-  Button
 } from "react-native";
+
+import Button from "./Button";
 
 export default class About extends Component {
   //   navigateToScreen = route => () => {

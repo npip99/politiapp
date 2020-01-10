@@ -34,7 +34,7 @@ function elevationShadowStyle(elevation) {
 
 export default function ListItem(props) {
   const titleStyle = styles.title;
-  if (props.title.split(" ").length > 5) {
+  if (props.info.title.split(" ").length > 5) {
     titleStyle.fontSize = 18;
   }
   return (

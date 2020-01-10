@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import React, { Component } from "react";
 import Icon from "react-native-vector-icons/AntDesign";
 import {
@@ -10,9 +9,14 @@ import {
   StyleSheet,
   Modal,
   TouchableHighlight,
-  Button,
-  TextInput
+  TextInput,
+  Platform
 } from "react-native";
+
+import Button from "./Button";
+import Config from "../Config";
+
+import { AsyncStorage } from "react-native";
 
 export default class ContactOfficial extends Component {
   constructor(props) {
@@ -21,6 +25,19 @@ export default class ContactOfficial extends Component {
       modalVisible: false,
       text: ""
     };
+    this.initKey();
+  }
+
+  initKey = async () => {
+    try {
+      let key = await AsyncStorage.getItem("key");
+      if (key === null) {
+        key = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+        await AsyncStorage.setItem("key", key);
+      }
+    } catch(err) {
+      console.log(err);
+    }
   }
 
   toggleModal(visible) {
@@ -32,13 +49,15 @@ export default class ContactOfficial extends Component {
   };
 
   postContact = async (official, content) => {
-    fetch("http://localhost:3000/contact", {
+    const key = await AsyncStorage.getItem("key");
+    fetch(Config.hostname + "/contact", {
       method: "POST",
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
+        key: key,
         official: official,
         content: content
       })
@@ -51,6 +70,10 @@ export default class ContactOfficial extends Component {
   };
 
   render() {
+    let headerStyle = {...styles.header};
+    if (Platform.OS == 'ios') {
+      headerStyle.marginTop = 60;
+    }
     return (
       <ScrollView keyboardShouldPersistTaps="handled">
         <Modal
@@ -60,7 +83,7 @@ export default class ContactOfficial extends Component {
           onRequestClose={() => {}}
         >
           <View style={styles.modal}>
-            <View style={styles.header}>
+            <View style={headerStyle}>
               <Text style={styles.text}>
                 To: {this.props.officialInfo.title}
               </Text>
@@ -80,10 +103,7 @@ export default class ContactOfficial extends Component {
               autoFocus={this.state.submitted ? false : true}
               multiline={true}
               ref={input => (this.input = input)}
-              style={{
-                marginLeft: 20,
-                marginRight: 20
-              }}
+              style={styles.message}
               placeholder="Write a message"
               onChangeText={text => this.setState({ text })}
               value={this.state.text}
@@ -134,7 +154,6 @@ export default class ContactOfficial extends Component {
 
 const styles = StyleSheet.create({
   header: {
-    marginTop: 60,
     height: 90,
     padding: 25,
     width: "100%"
@@ -150,7 +169,7 @@ const styles = StyleSheet.create({
     marginLeft: -15
   },
   modal: {
-    flex: 1
+    flex: 1,
   },
   text: {},
   titleContainer: {
@@ -162,5 +181,10 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 25,
     marginTop: 45
-  }
+  },
+  message: {
+    marginBottom: 10,
+    marginHorizontal: 20,
+  },
 });
+
