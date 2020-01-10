@@ -1,50 +1,5 @@
 var localOfficials = [
   {
-    id: 1,
-    name: "Bobby Powell",
-    position: "Florida Senator",
-    image:
-      "https://www.myfloridahouse.gov/FileStores/Adhoc/MemberPictures/State%20Senate/s030.jpg",
-    beliefs: [
-      {
-        belief: "I'm a representative"
-      },
-      {
-        belief: "I'm a representative"
-      }
-    ]
-  },
-  {
-    id: 2,
-    name: "Rick Roth",
-    position: "Florida Senator",
-    image:
-      "https://www.myfloridahouse.gov/FileStores/Web/Imaging/Member/4648.jpg",
-    beliefs: [
-      {
-        belief: "I'm a representative"
-      },
-      {
-        belief: "I'm a representative"
-      }
-    ]
-  },
-  {
-    id: 3,
-    name: "Brian Mast",
-    position: "U.S. House of Representatives",
-    image:
-      "https://www.myfloridahouse.gov/FileStores/Adhoc/MemberPictures/US%20House/18.jpg",
-    beliefs: [
-      {
-        belief: "I'm a representative"
-      },
-      {
-        belief: "I'm a representative"
-      }
-    ]
-  },
-  {
     id: 4,
     name: "Dave Kerner",
     position: "County Commissioner",
@@ -84,10 +39,20 @@ var localOfficials = [
       "https://apps.mypalmbeachpost.com/kycg2016/img/candidates/hal-valeche.jpg",
     beliefs: [
       {
-        belief: "I'm a county commissioner"
+        belief:
+          "Mr. Valeche graduated from Yale University with a Bachelor’s degree in American Studies. Upon graduation, Mr. Valeche entered the US Navy flight-training program at Pensacola, Florida. On completion of training, he was assigned to Fighter Squadron 191 at NAS Miramar California. During this tour, he flew 85 combat missions in Vietnam, logged 230 carrier landings and received six awards of the Air Medal.        "
       },
       {
-        belief: "I'm a county commissioner"
+        belief:
+          "After his service in the Navy, Mr. Valeche attended the Wharton School, where he received an MBA in Finance and received Director’s List"
+      },
+      {
+        belief:
+          "Following graduation, he moved to New York and began a ten-year career as an investment banker with Lehman Brothers, Merrill Lynch and Smith Barney."
+      },
+      {
+        belief:
+          "Hal moved to Palm Beach Gardens in 1993. Since then, he has started and operated several successful businesses, served as head of acquisitions for a Boca Raton-based public company and is currently working once again as an investment banker and venture capitalist.   "
       }
     ]
   },
@@ -99,10 +64,12 @@ var localOfficials = [
       "https://pbs.twimg.com/profile_images/1070389239584579584/fFRDE6Bb_400x400.jpg",
     beliefs: [
       {
-        belief: "I'm a county commissioner"
+        belief:
+          "Was a business executive overseeing sales, marketing and strategy for several Fortune 500 companies"
       },
       {
-        belief: "I'm a county commissioner"
+        belief:
+          "Regularly patrols his neighborhood and serves as its citizen observer patrol captain"
       }
     ]
   },
@@ -114,10 +81,12 @@ var localOfficials = [
       "https://cmgpalmbeachposteyeonpbc.files.wordpress.com/2016/05/mary-lou-berger.jpg?w=480&h=600",
     beliefs: [
       {
-        belief: "I'm a county commissioner"
+        belief:
+          "As County Commissioner Burt Aaronson’s senior administrative assistant from 1994-2012, Berger was in charge of monitoring community issues and responding to constituent concerns in commission District 5, which encompasses West Boynton, Boca & Delray Beach. "
       },
       {
-        belief: "I'm a county commissioner"
+        belief:
+          "Before moving to Florida and working for local government, Commissioner Berger worked for many years at Montgomery Ward while living in Pennsylvania."
       }
     ]
   },
@@ -129,10 +98,12 @@ var localOfficials = [
       "https://www.sun-sentinel.com/resizer/FtDNmEzR49r0FVhNScjthldv4Sw=/800x501/top/www.trbimg.com/img-591f6456/turbine/fl-sf100-melissa-mckinlay-pic",
     beliefs: [
       {
-        belief: "I'm a county commissioner"
+        belief:
+          "Prior to election, she spent nearly twenty years advocating on behalf of women, children and families as a Legislative aide to the Palm Beach County Legislative Affairs Office, to members of Congress and the US Senate, and as a volunteer with several organizations including the Junior League"
       },
       {
-        belief: "I'm a county commissioner"
+        belief:
+          "She was part of the team that developed The Butterfly House, Palm Beach County's first sexual assault response medical services center"
       }
     ]
   },
@@ -144,10 +115,12 @@ var localOfficials = [
       "https://upload.wikimedia.org/wikipedia/commons/4/49/Mack_Bernard.jpeg",
     beliefs: [
       {
-        belief: "I'm a county commissioner"
+        belief:
+          "Holds a Juris Doctor with honors from University of Florida Levin College of Law"
       },
       {
-        belief: "I'm a county commissioner"
+        belief:
+          "He was a member of the University of Florida Trial Team that participated in national competitions. "
       }
     ]
   },
@@ -159,16 +132,77 @@ var localOfficials = [
       "https://i0.wp.com/empowherofthepalmbeaches.org/wp-content/uploads/2016/01/Verdenia.png?zoom=2&resize=250%2C250&ssl=1",
     beliefs: [
       {
-        belief: "I'm a county commissioner"
+        belief: "She began her career as a budget analyst in Palm Beach County"
       },
       {
-        belief: "I'm a county commissioner"
+        belief:
+          "In 2016, Verdenia led a successful one-cent infrastructure surtax initiative for Palm Beach County that included partnerships with the Palm Beach County School District and the League of Cities. "
       }
     ]
   }
 ];
 
 var stateOfficials = [
+  {
+    id: 1,
+    name: "Bobby Powell",
+    position: "Florida Senator",
+    image:
+      "https://www.myfloridahouse.gov/FileStores/Adhoc/MemberPictures/State%20Senate/s030.jpg",
+    beliefs: [
+      {
+        belief:
+          "Top three legislative priorities are allowing local governments to prohibit concealed weapons at certain events, postponing the expiration date of state-funded 'health flex plans' for five years, and making it more difficult for prosecutors to try children as adults for criminal offenses."
+      }
+    ]
+  },
+  {
+    id: 2,
+    name: "Rick Roth",
+    position: "Florida Senator",
+    image:
+      "https://www.myfloridahouse.gov/FileStores/Web/Imaging/Member/4648.jpg",
+    beliefs: [
+      {
+        belief:
+          "Worked with colleagues to help pass $1.3 billion in lower taxes for working families, small businesses, and active military and veterans who have served and sacrificed for our country"
+      },
+      {
+        belief:
+          "Committed to nurturing a sustainable business friendly climate that grows our jobs and and attracts new 21st Century business opportunities."
+      },
+      {
+        belief:
+          "Supports greater funding from the state to schools and more and better education opportunities for students."
+      }
+    ]
+  },
+  {
+    id: 3,
+    name: "Brian Mast",
+    position: "U.S. House of Representatives",
+    image:
+      "https://www.myfloridahouse.gov/FileStores/Adhoc/MemberPictures/US%20House/18.jpg",
+    beliefs: [
+      {
+        belief:
+          "Prior to his election to Congress, Brian followed in his father’s footsteps by serving in the U.S. Army for more than 12 years, earning medals including The Bronze Star Medal, The Army Commendation Medal for Valor, The Purple Heart Medal, and The Defense Meritorious Service Medal. "
+      },
+      {
+        belief:
+          "While deployed in Afghanistan, he worked as a bomb disposal expert under the elite Joint Special Operations Command. The last improvised explosive device that he found resulted in catastrophic injuries, which included the loss of both of his legs."
+      },
+      {
+        belief:
+          "After his retirement from the Army, he continued working in counter-terrorism and national defense as an Explosive Specialist with the Department of Homeland Security. "
+      },
+      {
+        belief:
+          "Received a degree from Harvard University and volunteered to serve alongside the Israel Defense Forces to show support for the freedom Israel represents throughout the Middle East and the world."
+      }
+    ]
+  },
+
   {
     id: 0,
     name: "Marco Rubio",
@@ -178,9 +212,6 @@ var stateOfficials = [
     beliefs: [
       {
         belief: "Wants to reduce national debt, remove government deficit"
-      },
-      {
-        belief: "I'm a senator"
       }
     ]
   },
@@ -220,7 +251,35 @@ var stateOfficials = [
           "Supports term limits of 6 years for House of Representatives and 12 years for Senators. Currently, there are no term limits"
       },
       {
-        belief: "I'm the governor"
+        belief: "Sought an increase in bipartisanship in the state legislature "
+      },
+      {
+        belief:
+          "Allocated $2.5 billion for water resource projects including 360 million for Everglades projects"
+      },
+      {
+        belief: "Urged the legislature to support the use of smokeable cannabis"
+      },
+      {
+        belief:
+          " Supports legislation that would allow persons with concealed weapons permits to carry firearms openly"
+      },
+      { belief: "Supports a law mandating the use of E-verify by businesses" },
+      {
+        belif:
+          "Supports a state level ban on sanctuary city protections for undocumented immigrants "
+      },
+      {
+        belief:
+          "Expressed support for a state constitutional amendment to require a supermajority vote for any tax increases"
+      },
+      {
+        belif:
+          "Opposes allowing able-bodied, childless adults to receive Medicaid."
+      },
+      {
+        belief:
+          "Stated that he would implement a medical marijuana program, but opposes the legalization of recreational marijuana."
       }
     ]
   },
@@ -232,11 +291,15 @@ var stateOfficials = [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/AttorneyGeneral_AshleyMoody.jpg/440px-AttorneyGeneral_AshleyMoody.jpg",
     beliefs: [
       {
-        belief:
-          "Supports term limits of 6 years for House of Representatives and 12 years for Senators. Currently, there are no term limits"
+        belief: "At age 31, she became the youngest judge elected in Florida"
       },
       {
-        belief: "I'm the governor"
+        belief:
+          "As a judge, she founded the Attorney Ad Litem program recruiting volunteer attorneys to stand in the place of parents who did not appear in court with their children. "
+      },
+      {
+        belief:
+          "She  developed a mentoring program for at-risk children within the juvenile delinquency system"
       }
     ]
   },
@@ -249,10 +312,11 @@ var stateOfficials = [
     beliefs: [
       {
         belief:
-          "Supports term limits of 6 years for House of Representatives and 12 years for Senators. Currently, there are no term limits"
+          "Previously a member of the Florida House of Representatives representing the 6th District, which includes Panama City and other parts of southern Bay County, from 2006 to 2014"
       },
       {
-        belief: "I'm the governor"
+        belief:
+          "Worked to pass the firefighter cancer relief bill to provide protection and financial coverage to firefighters who are diagnosed with certain types of cancers"
       }
     ]
   },
@@ -265,10 +329,15 @@ var stateOfficials = [
     beliefs: [
       {
         belief:
-          "Supports term limits of 6 years for House of Representatives and 12 years for Senators. Currently, there are no term limits"
+          "In favor of removing obstacles to medical marijuana in Florida; Supported a state-run bank to provide financing for the marijuana industry"
       },
       {
-        belief: "I'm the governor"
+        belief:
+          " Pledged to 'ensure full background checks are completed on gun permits'"
+      },
+      {
+        belief:
+          "Endorsed automatically restoring voting rights for most felons after the completion of their sentences"
       }
     ]
   }
