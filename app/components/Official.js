@@ -6,18 +6,15 @@ import ContactOfficial from "./ContactOfficial";
 
 export default function Official(props) {
   const listData = props.info.beliefs.map(belief => {
+    if (!belief.comments) {
+      belief.comments = [];
+    }
+    const subsections = belief.comments.map((value, key) => ({id: key, val: value}));
+    console.log(belief);
+    console.log(subsections);
     return {
       title: belief.belief,
-      subsections: [
-        {
-          id: 1,
-          val: belief.pros
-        },
-        {
-          id: 2,
-          val: belief.cons
-        },
-      ],
+      subsections: subsections,
     };
   });
 
