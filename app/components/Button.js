@@ -4,7 +4,7 @@ import { StyleSheet, ScrollView, Text, Button, TouchableOpacity } from "react-na
 export default function CustomButton(props) {
   return (
     <TouchableOpacity style={styles.container} onPress={props.onPress}>
-      <Text style={styles.button}>{props.title}</Text>
+      <Text style={{...styles.button, ...props.buttonStyle}}>{props.title}</Text>
     </TouchableOpacity>
   );
 }
@@ -15,6 +15,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   button: {
+    fontSize: 16,
     color: "#147EFB"
   }
 });

@@ -68,6 +68,7 @@ export default class About extends Component {
             onPress={() => {
               this.toggleModal(true);
             }}
+            buttonStyle={{fontSize: 14}}
           />
         </TouchableHighlight>
       </View>
