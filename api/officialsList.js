@@ -251,7 +251,7 @@ var stateOfficials = [
     beliefs: [
       {
         belief:
-          "Supports term limits of 6 years for House of Representatives and 12 years for Senators. Currently, there are no term limits"
+          "Supports term limits of 6 years for House of Representatives and 12 years for Senators. Currently, there are no term limits",
         comments: [
           "Pros - Prevents lobbyists from using re-election as a way "
         ]
