@@ -211,7 +211,10 @@ var stateOfficials = [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Senator_Rubio_official_portrait.jpg/440px-Senator_Rubio_official_portrait.jpg",
     beliefs: [
       {
-        belief: "Wants to reduce national debt, remove government deficit"
+        belief: "Wants to reduce national debt, remove government deficit",
+        comments: [
+          "Pros - Interest payments currently make up 6% of all federal expenditures, and our total debt stands at $21.6 Trillion Dollars ($170,000 per household). As the debt grows, we waste more and more of our taxes on interest payments, which do not contribute to our well-being."
+        ]
       }
     ]
   },
@@ -227,7 +230,7 @@ var stateOfficials = [
           "Believes that governments are inherently inefficient, and that private enterprise is better.",
 	comments: [
           "Pros - Governments have no competitive pressure like a private company does. If a private company or citizen can do the same thing for cheaper, he will compete with other private companies and force lower prices.",
-          "Cons - Large Instutions like Social Security are known to have very low administrative costs, on the order of 0.8%. This is commonly lower than the administrative costs of many smaller enterprises, and is lower than the profit margin of any private company."
+          "Cons - Incredibly Large Instutions like Social Security are known to have very low administrative costs, on the order of 0.8%. This is commonly lower than the administrative costs of many smaller enterprises, and is lower than the profit margin of any private company."
 	]
       },
       {
@@ -249,6 +252,9 @@ var stateOfficials = [
       {
         belief:
           "Supports term limits of 6 years for House of Representatives and 12 years for Senators. Currently, there are no term limits"
+        comments: [
+          "Pros - Prevents lobbyists from using re-election as a way "
+        ]
       },
       {
         belief: "Sought an increase in bipartisanship in the state legislature "
